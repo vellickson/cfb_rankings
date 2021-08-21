@@ -1,0 +1,131 @@
+id,school,mascot,abbreviation,conference,division,location.venue_id,location.name,location.city,location.state,location.timezone,location.capacity,location.zip
+2005,Air Force,Falcons,AFA,Mountain West,Mountain,3713,Falcon Stadium,Colorado Springs,CO,America/Denver,46692,80840
+2006,Akron,Zips,AKR,Mid-American,East,3768,Summa Field at InfoCision Stadium,Akron,OH,America/New_York,30000,44399
+333,Alabama,Crimson Tide,ALA,SEC,West,3657,Bryant Denny Stadium,Tuscaloosa,AL,America/Chicago,101821,35487
+2026,Appalachian State,Mountaineers,APP,Sun Belt,,3792,Kidd Brewer Stadium,Boone,NC,America/New_York,24050,28608
+12,Arizona,Wildcats,ARIZ,Pac-12,South,3619,Arizona Stadium,Tucson,AZ,America/Phoenix,56029,85721
+9,Arizona State,Sun Devils,ASU,Pac-12,South,3947,Sun Devil Stadium,Tempe,AZ,America/Phoenix,56232,85287
+8,Arkansas,Razorbacks,ARK,SEC,West,3887,Donald W. Reynolds Razorback Stadium Frank Broyles Field,Fayetteville,AR,America/Chicago,72000,72702
+2032,Arkansas State,Red Wolves,ARST,Sun Belt,,3625,Centennial Bank Stadium,Jonesboro,AR,America/Chicago,30964,72404
+349,Army,Black Knights,ARMY,FBS Independents,,3841,Blaik Field at Michie Stadium,West Point,NY,America/New_York,38000,10996
+2,Auburn,Tigers,AUB,SEC,West,3785,Jordan-Hare Stadium,Auburn,AL,America/Chicago,87451,36849
+2050,Ball State,Cardinals,BALL,Mid-American,West,3919,Scheumann Stadium,Muncie,IN,America/Indiana/Indianapolis,22500,47306
+239,Baylor,Bears,BAY,Big 12,,3724,Floyd Casey Stadium,Waco,TX,America/Chicago,50000,76798
+68,Boise State,Broncos,BSU,Mountain West,Mountain,3653,Albertsons Stadium,Boise,ID,America/Boise,36387,83725
+103,Boston College,Eagles,BC,ACC,Atlantic,3615,Alumni Stadium,Chestnut Hill,MA,America/New_York,44500,"2467 "
+189,Bowling Green,Falcons,BGSU,Mid-American,East,3700,Doyt Perry Stadium,Bowling Green,OH,America/New_York,24000,43403
+2084,Buffalo,Bulls,BUFF,Mid-American,East,3965,UB Stadium,Amherst,NY,America/New_York,29013,14260
+252,BYU,Cougars,BYU,FBS Independents,,3801,LaVell Edwards Stadium,Provo,UT,America/Denver,63725,84602
+25,California,Golden Bears,CAL,Pac-12,North,3831,California Memorial Stadium,Berkeley,CA,America/Los_Angeles,62717,94720
+2117,Central Michigan,Chippewas,CMU,Mid-American,West,3786,Kelly/Shorts Stadium,Mount Pleasant,MI,America/Detroit,32885,48859
+2429,Charlotte,49ers,CHAR,Conference USA,East,4418,Jerry Richardson Stadium,Charlotte,NC,America/New_York,15314,28223
+2132,Cincinnati,Bearcats,CIN,American Athletic,East,3854,Nippert Stadium,Cincinnati,OH,America/New_York,40000,45221
+228,Clemson,Tigers,CLEM,ACC,Atlantic,3836,Memorial Stadium,Clemson,SC,America/New_York,81500,29634
+324,Coastal Carolina,Chanticleers,CCU,Sun Belt,,3654,Brooks Stadium,Conway,SC,America/New_York,9214,29528
+38,Colorado,Buffaloes,COLO,Pac-12,South,3726,Folsom Field,Boulder,CO,America/Denver,50183,80309
+36,Colorado State,Rams,CSU,Mountain West,Mountain,3761,Sonny Lubick Field at Hughes Stadium,Fort Collins,CO,America/Denver,34400,80526
+41,Connecticut,Huskies,CONN,American Athletic,East,3892,Rentschler Field,East Hartford,CT,America/New_York,40000,"6118 "
+150,Duke,Blue Devils,DUKE,ACC,Coastal,3982,Wallace Wade Stadium,Durham,NC,America/New_York,40000,27708
+151,East Carolina,Pirates,ECU,American Athletic,East,3699,Dowdy-Ficklen Stadium,Greenville,NC,America/New_York,50000,27858
+2199,Eastern Michigan,Eagles,EMU,Mid-American,West,3912,Rynearson Stadium,Ypsilanti,MI,America/Detroit,30200,48197
+57,Florida,Gators,FLA,SEC,East,3634,Ben Hill Griffin Stadium,Gainesville,FL,America/New_York,88548,32653
+2226,Florida Atlantic,Owls,FAU,Conference USA,East,3715,FAU Stadium,Boca Raton,FL,America/New_York,30000,33499
+2229,Florida International,Golden Panthers,FIU,Conference USA,East,218,FIU Stadium,Miami,FL,America/New_York,23500,33199
+52,Florida State,Seminoles,FSU,ACC,Atlantic,3697,Bobby Bowden Field at Doak Campbell Stadium,Tallahassee,FL,America/New_York,79560,32306
+278,Fresno State,Bulldogs,FRES,Mountain West,West,3660,Bulldog Stadium,Fresno,CA,America/Los_Angeles,41031,93740
+61,Georgia,Bulldogs,UGA,SEC,East,3917,Sanford Stadium,Athens,GA,America/New_York,92746,30602
+290,Georgia Southern,Eagles,GASO,Sun Belt,,3608,Paulson Stadium,Statesboro,GA,America/New_York,24300,30460
+2247,Georgia State,Panthers,GAST,Sun Belt,,3495,Georgia Dome,Atlanta,GA,America/New_York,74228,39901
+59,Georgia Tech,Yellow Jackets,GT,ACC,Coastal,721,Bobby Dodd Stadium at Historic Grant Field,Atlanta,GA,America/New_York,55000,30332
+62,Hawai'i,Rainbow Warriors,HAW,Mountain West,West,3610,Aloha Stadium,Honolulu,HI,Pacific/Honolulu,50000,96818
+248,Houston,Cougars,HOU,American Athletic,West,453,Robertson Stadium,Houston,TX,America/Chicago,32000,77004
+356,Illinois,Fighting Illini,ILL,Big Ten,West,3597,Alumni Memorial Field,Lexington,VA,America/New_York,10000,24450
+84,Indiana,Hoosiers,IND,Big Ten,East,3830,Memorial Stadium,Bloomington,IN,America/Indiana/Indianapolis,52959,47408
+2294,Iowa,Hawkeyes,IOWA,Big Ten,West,3793,Kinnick Stadium,Iowa City,IA,America/Chicago,70585,52242
+66,Iowa State,Cyclones,ISU,Big 12,,3772,Jack Trice Stadium,Ames,IA,America/Chicago,61500,50011
+2305,Kansas,Jayhawks,KU,Big 12,,3833,Memorial Stadium,Lawrence,KS,America/Chicago,50071,66045
+2306,Kansas State,Wildcats,KSU,Big 12,,3636,Bill Snyder Family Football Stadium,Manhattan,KS,America/Chicago,50000,66502
+2309,Kent State,Golden Flashes,KENT,Mid-American,East,3696,Dix Stadium,Kent,OH,America/New_York,25000,44242
+96,Kentucky,Wildcats,UK,SEC,East,3683,Commonwealth Stadium,Lexington,KY,America/New_York,61000,40506
+2335,Liberty,Flames,LIB,FBS Independents,,3992,Williams Stadium,Lynchburg,VA,America/New_York,19200,24502
+309,Louisiana,Ragin' Cajuns,ULL,Sun Belt,,3666,Cajun Field,Lafayette,LA,America/Chicago,36900,70506
+2433,Louisiana Monroe,Warhawks,ULM,Sun Belt,,3817,Malone Stadium,Monroe,LA,America/Chicago,30427,71209
+2348,Louisiana Tech,Bulldogs,LT,Conference USA,West,3776,Joe Aillet Stadium,Ruston,LA,America/Chicago,28019,71272
+97,Louisville,Cardinals,LOU,ACC,Atlantic,3873,Papa John's Cardinal Stadium,Louisville,KY,America/Kentucky/Louisville,55000,40292
+99,LSU,Tigers,LSU,SEC,West,3958,Tiger Stadium,Baton Rouge,LA,America/Chicago,102321,70803
+276,Marshall,Thundering Herd,MRSH,Conference USA,East,3775,Joan C. Edwards Stadium,Huntington,WV,America/New_York,38019,25755
+120,Maryland,Terrapins,MD,Big Ten,East,3665,Maryland Stadium,College Park,MD,America/New_York,51802,20742
+235,Memphis,Tigers,MEM,American Athletic,West,3805,Liberty Bowl Memorial Stadium,Memphis,TN,America/Chicago,62380,38152
+2390,Miami,Hurricanes,MIAMI,ACC,Coastal,3948,Hard Rock Stadium,Miami Gardens,FL,America/New_York,65326,33299
+193,Miami (OH),RedHawks,M-OH,Mid-American,East,3996,Yager Stadium,Oxford,OH,America/New_York,24286,45056
+130,Michigan,Wolverines,MICH,Big Ten,East,3558,Michigan Stadium,Ann Arbor,MI,America/Detroit,107601,48109
+127,Michigan State,Spartans,MSU,Big Ten,East,3936,Spartan Stadium,East Lansing,MI,America/Detroit,75005,48824
+2393,Middle Tennessee,Blue Raiders,MTSU,Conference USA,East,3725,"Johnny Red"""" Floyd Stadium""""",Murfreesboro,TN,America/Chicago,31000,37132
+135,Minnesota,Golden Gophers,MINN,Big Ten,West,3953,TCF Bank Stadium,Minneapolis,MN,America/Chicago,50805,55488
+344,Mississippi State,Bulldogs,MSST,SEC,West,3693,Davis Wade Stadium,Starkville,MS,America/Chicago,61337,39762
+142,Missouri,Tigers,MIZ,SEC,East,3838,Faurot Field,Columbia,MO,America/Chicago,71168,65211
+2426,Navy,Midshipmen,NAVY,American Athletic,West,3852,Navy-Marine Corps Memorial Stadium,Annapolis,MD,America/New_York,34000,21402
+152,NC State,Wolfpack,NCST,ACC,Atlantic,3670,Carter-Finley Stadium,Raleigh,NC,America/New_York,57583,27695
+158,Nebraska,Cornhuskers,NEB,Big Ten,West,3834,Memorial Stadium,Lincoln,NE,America/Chicago,86047,68588
+2440,Nevada,Wolf Pack,NEV,Mountain West,West,3816,Mackay Stadium,Reno,NV,America/Los_Angeles,26000,89557
+167,New Mexico,Lobos,UNM,Mountain West,Mountain,3971,University Stadium,Albuquerque,NM,America/Denver,39224,87131
+166,New Mexico State,Aggies,NMSU,FBS Independents,,3601,Aggie Memorial Stadium,Las Cruces,NM,America/Denver,30343,88003
+153,North Carolina,Tar Heels,UNC,ACC,Coastal,3787,Kenan Memorial Stadium,Chapel Hill,NC,America/New_York,62980,27515
+2459,Northern Illinois,Huskies,NIU,Mid-American,West,3764,Brigham Field at Huskie Stadium,DeKalb,IL,America/Chicago,23595,60115
+249,North Texas,Mean Green,UNT,Conference USA,West,3825,Apogee Stadium,Denton,TX,America/Chicago,30850,76210
+77,Northwestern,Wildcats,NW,Big Ten,West,3911,Ryan Field,Evanston,IL,America/Chicago,47130,60208
+87,Notre Dame,Fighting Irish,ND,FBS Independents,,3855,Notre Dame Stadium,Notre Dame,IN,America/Indiana/Indianapolis,80795,46556
+195,Ohio,Bobcats,OHIO,Mid-American,East,3876,Peden Stadium,Athens,OH,America/New_York,24000,45701
+194,Ohio State,Buckeyes,OSU,Big Ten,East,3861,Ohio Stadium,Columbus,OH,America/New_York,104944,43210
+201,Oklahoma,Sooners,OKLA,Big 12,,3835,Gaylord Family Oklahoma Memorial Stadium,Norman,OK,America/Chicago,84389,73019
+197,Oklahoma State,Cowboys,OKST,Big 12,,3646,Boone Pickens Stadium,Stillwater,OK,America/Chicago,60218,74078
+295,Old Dominion,Monarchs,ODU,Conference USA,East,3918,Foreman Field,Norfolk,VA,America/New_York,20118,23551
+145,Ole Miss,Rebels,MISS,SEC,West,3974,Vaught-Hemingway Stadium,Oxford,MS,America/Chicago,64038,38677
+2483,Oregon,Ducks,ORE,Pac-12,North,3626,Autzen Stadium,Eugene,OR,America/Los_Angeles,54000,97401
+204,Oregon State,Beavers,ORST,Pac-12,North,3893,Reser Stadium,Corvallis,OR,America/Los_Angeles,45674,97331
+213,Penn State,Nittany Lions,PSU,Big Ten,East,3632,Beaver Stadium,University Park,PA,America/New_York,106572,16802
+221,Pittsburgh,Panthers,PITT,ACC,Coastal,3752,Heinz Field,Pittsburgh,PA,America/New_York,68400,15260
+2509,Purdue,Boilermakers,PUR,Big Ten,West,3907,Ross-Ade Stadium,West Lafayette,IN,America/Indiana/Indianapolis,57236,47907
+242,Rice,Owls,RICE,Conference USA,West,3895,Rice Stadium,Houston,TX,America/Chicago,47000,77251
+164,Rutgers,Scarlet Knights,RUTG,Big Ten,East,3754,High Point Solutions Stadium,Piscataway,NJ,America/New_York,52454,"8854 "
+21,San Diego State,Aztecs,SDSU,Mountain West,West,3932,Qualcomm Stadium,San Diego,CA,America/Los_Angeles,70561,92108
+23,San José State,Spartans,SJSU,Mountain West,West,3935,Spartan Stadium,San Jose,CA,America/Los_Angeles,30456,95112
+2567,SMU,Mustangs,SMU,American Athletic,West,3735,Gerald J. Ford Stadium,University Park,TX,America/Chicago,32000,75275
+6,South Alabama,Jaguars,USA,Sun Belt,,3797,Ladd Peebles Stadium,Mobile,AL,America/Chicago,33471,36695
+2579,South Carolina,Gamecocks,SC,SEC,East,3994,Williams-Brice Stadium,Columbia,SC,America/New_York,80250,29208
+2572,Southern Mississippi,Golden Eagles,USM,Conference USA,West,3815,M. M. Roberts Stadium,Hattiesburg,MS,America/Chicago,36000,39402
+58,South Florida,Bulls,USF,American Athletic,East,3886,Raymond James Stadium,Tampa,FL,America/New_York,65857,33620
+24,Stanford,Cardinal,STAN,Pac-12,North,3940,Stanford Stadium,Stanford,CA,America/Los_Angeles,50424,94305
+183,Syracuse,Orange,SYR,ACC,Atlantic,1964,Carrier Dome,Syracuse,NY,America/New_York,49250,13244
+2628,TCU,Horned Frogs,TCU,Big 12,,3616,Amon G. Carter Stadium,Fort Worth,TX,America/Chicago,45000,76129
+218,Temple,Owls,TEM,American Athletic,East,3806,Lincoln Financial Field,Philadelphia,PA,America/New_York,68532,19122
+2633,Tennessee,Volunteers,TENN,SEC,East,3853,Neyland Stadium,Knoxville,TN,America/New_York,102455,37996
+251,Texas,Longhorns,TEX,Big 12,,3910,Darrell K Royal-Texas Memorial Stadium,Austin,TX,America/Chicago,100119,78712
+245,Texas A&M,Aggies,TA&M,SEC,West,3795,Kyle Field,College Station,TX,America/Chicago,102733,77843
+326,Texas State,Bobcats,TXST,Sun Belt,,3644,Jim Wacker Field at Bobcat Stadium,San Marcos,TX,America/Chicago,30000,78666
+2641,Texas Tech,Red Raiders,TTU,Big 12,,3784,Jones AT&T Stadium,Lubbock,TX,America/Chicago,60862,79409
+2649,Toledo,Rockets,TOL,Mid-American,West,3739,Glass Bowl,Toledo,OH,America/New_York,26248,43606
+2653,Troy,Trojans,TROY,Sun Belt,,3975,Veterans Memorial Stadium,Troy,AL,America/Chicago,30000,36082
+2655,Tulane,Green Wave,TULN,American Athletic,West,4729,Benson Field at Yulman Stadium,New Orleans,LA,America/Chicago,30000,70118
+202,Tulsa,Golden Hurricane,TLSA,American Athletic,West,3674,Skelly Field at H. A. Chapman Stadium,Tulsa,OK,America/Chicago,30000,74194
+5,UAB,Blazers,UAB,Conference USA,West,3803,Legion Field,Birmingham,AL,America/Chicago,71594,35294
+2116,UCF,Knights,UCF,American Athletic,East,3652,Bright House Networks Stadium,Orlando,FL,America/New_York,44206,32816
+26,UCLA,Bruins,UCLA,Pac-12,South,1056,Rose Bowl,Pasadena,CA,America/Los_Angeles,92542,90095
+113,UMass,Minutemen,UMASS,FBS Independents,,3985,Warren McGuirk Alumni Stadium,Hadley,MA,America/New_York,17000,"1003 "
+2439,UNLV,Rebels,UNLV,Mountain West,West,3914,Sam Boyd Stadium,Whitney,NV,America/Los_Angeles,36800,89154
+30,USC,Trojans,USC,Pac-12,South,477,Los Angeles Memorial Coliseum,Los Angeles,CA,America/Los_Angeles,93607,90089
+254,Utah,Utes,UTAH,Pac-12,South,587,Rice-Eccles Stadium,Salt Lake City,UT,America/Denver,45807,84112
+328,Utah State,Aggies,USU,Mountain West,Mountain,3905,Romney Stadium,Logan,UT,America/Denver,25513,84322
+2638,UTEP,Miners,UTEP,Conference USA,West,3946,Sun Bowl Stadium,El Paso,TX,America/Denver,51500,79968
+2636,UT San Antonio,Roadrunners,UTSA,Conference USA,West,3604,Alamodome,San Antonio,TX,America/Chicago,65000,78299
+238,Vanderbilt,Commodores,VAN,SEC,East,3973,Vanderbilt Stadium,Nashville,TN,America/Chicago,40350,37212
+258,Virginia,Cavaliers,UVA,ACC,Coastal,3923,Scott Stadium,Charlottesville,VA,America/New_York,61500,22904
+259,Virginia Tech,Hokies,VT,ACC,Coastal,3799,Lane Stadium,Blacksburg,VA,America/New_York,66233,24061
+154,Wake Forest,Demon Deacons,WAKE,ACC,Atlantic,3630,BB&T Field,Winston-Salem,NC,America/New_York,31500,27105
+264,Washington,Huskies,WASH,Pac-12,North,3765,Husky Stadium,Seattle,WA,America/Los_Angeles,70500,98195
+265,Washington State,Cougars,WSU,Pac-12,North,3820,Martin Stadium,Pullman,WA,America/Los_Angeles,32248,99164
+98,Western Kentucky,Hilltoppers,WKU,Conference USA,East,3796,Houchens Industries-L. T. Smith Stadium,Bowling Green,KY,America/Chicago,22113,42101
+2711,Western Michigan,Broncos,WMU,Mid-American,West,3980,Waldo Stadium,Kalamazoo,MI,America/Detroit,30200,49008
+277,West Virginia,Mountaineers,WVU,Big 12,,3842,Mountaineer Field at Milan Puskar Stadium,Morgantown,WV,America/New_York,60000,26507
+275,Wisconsin,Badgers,WIS,Big Ten,West,347,Camp Randall Stadium,Madison,WI,America/Chicago,80321,53711
+2751,Wyoming,Cowboys,WYO,Mountain West,Mountain,3984,War Memorial Stadium,Laramie,WY,America/Denver,29181,82071
