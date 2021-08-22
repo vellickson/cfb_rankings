@@ -36,7 +36,7 @@ class GameResults:
             away_points = result.get('away_points')
             neutral_location = result.get('neutral_site')
 
-            # TODO: Make a decision about how to handle the handling of record specific information
+            # TODO: Make a decision about how to handle record information
             if home_points > away_points:
                 winning_team.name = home_team
                 losing_team.name = away_team

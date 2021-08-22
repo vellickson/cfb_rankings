@@ -2,6 +2,7 @@
 Defines a team's progress throughout the year
 """
 
+
 class Record:
 
     def __init__(self):
