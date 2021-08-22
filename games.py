@@ -36,11 +36,13 @@ class GameResults:
             away_points = result.get('away_points')
             neutral_location = result.get('neutral_site')
 
+            # TODO: Make a decision about how to handle the handling of record specific information
             if home_points > away_points:
                 winning_team.name = home_team
                 losing_team.name = away_team
-                winning_team.point_differential = home_points - away_points
-                losing_team.point_differential = away_points - home_points
+                winning_team.record.update_point_differential(home_points - away_points)
+                winning_team.game_point_differential = home_points - away_points
+                losing_team.game_point_differential = away_points - home_points
                 if not neutral_location:
                     winning_team.game_location = "home"
                     losing_team.game_location = "away"
@@ -48,8 +50,8 @@ class GameResults:
             else:
                 winning_team.name = away_team
                 losing_team.name = home_team
-                winning_team.point_differential = away_points - home_points
-                losing_team.point_differential = home_points - away_points
+                winning_team.game_point_differential = away_points - home_points
+                losing_team.game_point_differential = home_points - away_points
                 if not neutral_location:
                     winning_team.game_location = "away"
                     losing_team.game_location = "home"
@@ -61,8 +63,8 @@ class GameResults:
             winning_team.opponents.append(losing_team)
             losing_team.opponents.append(winning_team)
 
-            winning_team.update_win_loss(wins=1)
-            losing_team.update_win_loss(losses=1)
+            winning_team.update_record(we_won=True, season=self.season, week=self.week)
+            losing_team.update_record(we_won=False, season=self.season, week=self.week)
             print('blah')
 
     def extract_team_data(self, game_results):
