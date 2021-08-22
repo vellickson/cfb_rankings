@@ -9,11 +9,13 @@ Team Attributes
 
 class Team:
 
-    def __init__(self, name):
-        self.name = name
+    def __init__(self):
+        self.name = ''
         self.total_wins = 0
         self.total_losses = 0
-        self.opponents = {}
+        self.opponents = []
+        self.point_differential = 0
+        self.game_location = ''
 
     def get_win_loss(self):
         """sql call that returns wins and losses"""
