@@ -1,11 +1,12 @@
 """
-Defines a team's progress throughout the year
+Define a team's progress throughout the year
 """
 
 
 class Record:
 
-    def __init__(self):
+    def __init__(self, team):
+        self.team_name = team
         self.win_loss = {'wins': 0, 'losses': 0}
         self.home_wins = 0
         self.home_losses = 0
@@ -22,16 +23,20 @@ class Record:
     def add_opponent(self, opponent):
         self.opponents.append(opponent)
 
+    # WAIT
     def get_opponents(self):
         return self.opponents
 
-    def update_point_differential(self, points):
-        self.point_diff += points
+    # DO THIS AS PART OF UPDATE STATEMENT TO DB
+    # def update_point_differential(self, points):
+    #    self.point_diff += points
 
+    # MAYBE DO THIS AS PART OF WHATEVER CALLS RECORD?
     def get_win_loss(self):
         """aggregate home/away/neutral wins and losses"""
         return self.win_loss
 
+    # Just call the property directly
     def get_point_differential(self):
         return self.point_diff
 

@@ -6,7 +6,10 @@
 
 """
 import requests
+import psycopg2
+import json
 from team import Team
+from record import Record
 
 
 class GameResults:
@@ -14,6 +17,13 @@ class GameResults:
     def __init__(self, season, week):
         self.season = season
         self.week = week
+        # self.conn = psycopg2.connect("dbname=cfb_rankings user=postgres password=postgres")
+        # self.cur = self.conn.cursor()
+        # sql_get_team_id = f"SELECT team_id from teams where team_name = '{self.name}'"
+        # self.cur.execute(sql_get_team_id)
+        # team_id = self.cur.fetchone()[0]
+        # self.team_id = self.cur.fetchone()[0]
+
 
     def get_weekly_game_results(self):
         """for given week, make an API call to get the info"""
@@ -21,11 +31,22 @@ class GameResults:
         headers = {'Accept': 'application/json',
                    'Authorization': 'Bearer XNvoXV6PuAgCRpcNSuo9+nYU6xmWa/16GxJ+D8NLwKVS3zyjETQPatR7b6Hq92t4'}
 
-        # TODO: Add exception handling to api request
-        r = requests.get(url, headers=headers)
+        # TODO: Add exception handling to api request and use status_code
+        # PRODUCTION
+        # r = requests.get(url, headers=headers)
         # print(r.status_code)
 
-        results_as_list = r.json()
+        # TESTING ONLY
+        #with open('2019week1.json', 'w') as f:
+        #    json.dump(r.json(), f)
+
+        #f.close()
+
+        with open('2019week1.json', 'r') as f:
+            results_as_list = json.load(f)
+
+        # PRODUCTION
+        # results_as_list = r.json()
 
         for result in results_as_list:
 
@@ -35,42 +56,49 @@ class GameResults:
             away_points = result.get('away_points')
             neutral_location = result.get('neutral_site')
 
-            # TODO: Make a decision about how to handle record information
+            # TODO: What to do with FCS teams?
             if home_points > away_points:
-                winning_team = Team(home_team)
-                losing_team = Team(away_team)
-                winning_team.record.update_point_differential(home_points - away_points)
-                losing_team.record.update_point_differential(away_points - home_points)
-                # winning_team.game_point_differential = home_points - away_points
-                # losing_team.game_point_differential = away_points - home_points
+                winning_team_record = Record(home_team)
+                losing_team_record = Record(away_team)
+                winning_team_record.point_diff = home_points - away_points
+                losing_team_record.point_diff = away_points - home_points
+
                 if not neutral_location:
-                    winning_team.record.game_location = "home"
-                    losing_team.record.game_location = "away"
+                    winning_team_record.game_location = "home"
+                    losing_team_record.game_location = "away"
 
             else:
-                winning_team = Team(away_team)
-                losing_team = Team(home_team)
-                winning_team.record.update_point_differential(away_points - home_points)
-                losing_team.record.update_point_differential(home_points - away_points)
-                # winning_team.game_point_differential = away_points - home_points
-                # losing_team.game_point_differential = home_points - away_points
+                winning_team_record = Record(away_team)
+                losing_team_record = Record(home_team)
+                winning_team_record.point_diff = away_points - home_points
+                losing_team_record.point_diff = home_points - away_points
+
                 if not neutral_location:
-                    winning_team.record.game_location = "away"
-                    losing_team.record.game_location = "home"
+                    winning_team_record.game_location = "away"
+                    losing_team_record.game_location = "home"
 
             if neutral_location:
-                winning_team.game_location = "neutral"
-                losing_team.game_location = "neutral"
+                winning_team_record.game_location = "neutral"
+                losing_team_record.game_location = "neutral"
 
-            winning_team.record.opponents.append(losing_team)
-            losing_team.record.opponents.append(winning_team)
+            winning_team_record.opponents.append(losing_team_record.team_name)
+            losing_team_record.opponents.append(winning_team_record.team_name)
 
-            winning_team.record.update_win_loss(we_won=True, season=self.season)
-            losing_team.record.update_win_loss(we_won=False, season=self.season)
+            winning_team_record.update_win_loss(we_won=True)
+            losing_team_record.update_win_loss(we_won=False)
 
-            winning_team.update_record()
-            losing_team.update_record()
-            print('blah')
+            try:
+                winning_team = Team(winning_team_record.team_name, record=winning_team_record)
+                winning_team.update_record(self.season)
+            except:
+                print(f'could not write records for {winning_team_record.team_name} ... FCS?')
+
+            try:
+                losing_team = Team(losing_team_record.team_name, record=losing_team_record)
+                losing_team.update_record(self.season)
+            except:
+                print(f'could not write records for {losing_team_record.team_name} ... FCS?')
+
 
     def extract_team_data(self, game_results):
         """extract information specific to each team"""
