@@ -1,6 +1,6 @@
 import sys
 import getopt
-from games import GameResults
+import games
 
 
 def main(argv):
@@ -22,8 +22,7 @@ def main(argv):
             week = arg
     print('Season is ', season)
     print('Week is ', week)
-    g = GameResults(season, week)
-    g.get_weekly_game_results()
+    games.get_weekly_game_results(season, week)
 
 
 if __name__ == "__main__":

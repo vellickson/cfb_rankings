@@ -61,9 +61,20 @@ class Team:
         print(f'record_id for {self.name}: {record_id}')
 
         sql_update_record = f"UPDATE records set {self.record.win_loss_type} = " \
-              f"{self.record.win_loss_type} + 1 WHERE team_id = {self.team_id}"
+            f"{self.record.win_loss_type} + 1, point_diff = point_diff + {self.record.point_diff} " \
+            f"WHERE team_id = {self.team_id}"
 
-        def get_record_id()
+        # print(sql_update_record)
+        try:
+            cur_update_record = self.conn.cursor()
+            cur_update_record.execute(sql_update_record)
+            self.conn.commit()
+            cur_update_record.close()
+        except Exception as error:
+            print(f'Unable to update game record for {self.name} using this statement: {sql_update_record} because'
+                  f'of {error}')
+
+        # def get_record_id():
 
     def get_opponents_win_loss(self):
         """sql call to get the win loss records of all opponents"""
