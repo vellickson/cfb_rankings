@@ -1,6 +1,6 @@
 create table teams
 (
-    team_id           serial
+    team_id           serial not null
         constraint teams_pkey
             primary key,
     team_name         varchar,

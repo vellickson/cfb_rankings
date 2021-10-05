@@ -10,7 +10,7 @@ sql = """INSERT INTO teams(team_name, conference, cfbd_team_id, mascot, division
                             cfbd_venue_id, location_city, timezone, location_state, location_capacity, location_venue)
              VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"""
 
-conn = psycopg2.connect("dbname=cfb_rankings user=postgres password=dbuser")
+conn = psycopg2.connect("dbname=cfb_rankings user=postgres password=postgres")
 cur = conn.cursor()
 
 with open(team_data_file, newline='') as f:
