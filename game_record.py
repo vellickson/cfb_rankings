@@ -12,7 +12,7 @@ class GameRecord:
         self.game_location = None
         self.win_loss_type = None
 
-    def set_win_loss_type(self, we_won):
+    def set_win_loss_outcome(self, we_won):
         if self.game_location == 'home':
             if we_won:
                 self.win_loss_type = 'home_wins'
