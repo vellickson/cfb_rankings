@@ -42,9 +42,8 @@ class Team:
 
         print(f'SQL: {sql_update_record}')
 
-        sql_update_opponents = f"INSERT INTO season_opponents(record_id, team_id) VALUES({record_id}, " \
-                               f"{game_record.get_opponents()})"
-
+        sql_update_opponents = f"INSERT INTO season_opponents(record_id, opponent_id) VALUES({record_id}, " \
+                               f"{game_record.opponent})"
 
         try:
             cur_update_record = self.conn.cursor()
@@ -89,8 +88,6 @@ class Team:
         except Exception as error:
             print(f'Unable to create record for {self.name} in the {season} season: {error}')
             sys.exit()
-
-
 
     def get_opponents_win_loss(self):
         """sql call to get the win loss records of all opponents"""

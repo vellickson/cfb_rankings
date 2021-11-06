@@ -2,7 +2,6 @@
 Define a team's progress throughout the year
 """
 
-
 class GameRecord:
 
     def __init__(self, team):

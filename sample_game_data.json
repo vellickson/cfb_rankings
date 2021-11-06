@@ -1,0 +1,38 @@
+{
+  "id": 401110723,
+  "season": 2019,
+  "week": 1,
+  "season_type": "regular",
+  "start_date": "2019-08-24T23:00:00.000Z",
+  "start_time_tbd": null,
+  "neutral_site": true,
+  "conference_game": false,
+  "attendance": 66543,
+  "venue_id": 4013,
+  "venue": "Camping World Stadium",
+  "home_id": 57,
+  "home_team": "Florida",
+  "home_conference": "SEC",
+  "home_points": 24,
+  "home_line_scores": [
+    7,
+    0,
+    10,
+    7
+  ],
+  "home_post_win_prob": "0.9059534582132265",
+  "away_id": 2390,
+  "away_team": "Miami",
+  "away_conference": "ACC",
+  "away_points": 20,
+  "away_line_scores": [
+    3,
+    10,
+    0,
+    7
+  ],
+  "away_post_win_prob": "0.09404654178677352",
+  "excitement_index": "8.7679102419",
+  "highlights": "https://www.youtube.com/watch?v=WeJi4p0jqXA",
+  "notes": "CAMPING WORLD KICKOFF"
+}
