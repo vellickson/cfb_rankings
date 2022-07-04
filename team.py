@@ -13,7 +13,7 @@ class Team:
         self.name = str(name)
         self.name = name.replace('\'', '\'\'')
 
-        self.conn = psycopg2.connect("dbname=cfb_rankings user=postgres password=postgres")
+        self.conn = psycopg2.connect("dbname='cfb_rankings' user='postgres' password='postgres' host='localhost' port=5433")
 
         self.team_id = self.get_team_id()
 
@@ -42,6 +42,9 @@ class Team:
 
         print(f'SQL: {sql_update_record}')
 
+        sql_update_opponents = f"INSERT INTO season_opponents(record_id, opponent_id) VALUES({record_id}, " \
+                               f"{game_record.opponent})"
+
         try:
             cur_update_record = self.conn.cursor()
             cur_update_record.execute(sql_update_record)
@@ -50,19 +53,6 @@ class Team:
         except Exception as error:
             print(f'Unable to update game record for {self.name} using this statement: {sql_update_record} because'
                   f'of {error}')
-
-        opponent = Team(game_record.opponent)
-        opponent_id = opponent.get_team_id()
-
-        sql_update_opponents = f"INSERT INTO season_opponents(record_id, opponent_id) VALUES({record_id}, " \
-                               f"{opponent_id})"
-        try:
-            cur_update_opponent = self.conn.cursor()
-            cur_update_opponent.execute(sql_update_opponents)
-            self.conn.commit()
-            cur_update_opponent.close()
-        except Exception as error:
-            print(f'Unable to insert opponent record for {self.name} using {sql_update_opponents} because of {error}')
 
     def get_season_record(self, season):
         """retrieve season record"""
@@ -98,8 +88,6 @@ class Team:
         except Exception as error:
             print(f'Unable to create record for {self.name} in the {season} season: {error}')
             sys.exit()
-
-
 
     def get_opponents_win_loss(self):
         """sql call to get the win loss records of all opponents"""
