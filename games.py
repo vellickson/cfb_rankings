@@ -28,7 +28,7 @@ def get_weekly_game_results(season, week):
     #    json.dump(r.json(), f)
 
     # TESTING
-    with open('2019week1game1.json', 'r') as f:
+    with open('2019week2game1.json', 'r') as f:
         results_as_list = json.load(f)
 
     f.close()
@@ -74,38 +74,38 @@ def get_weekly_game_results(season, week):
         winning_team_game_record.set_win_loss_outcome(we_won=True)
         losing_team_game_record.set_win_loss_outcome(we_won=False)
 
-        winning_team = create_team(winning_team_game_record)
-        losing_team = create_team(losing_team_game_record)
+        winning_team = get_team(winning_team_game_record)
+        losing_team = get_team(losing_team_game_record)
 
-        if winning_team is not None:
-            winning_team.update_record(season, winning_team_game_record)
-        if losing_team is not None:
-            losing_team.update_record(season, losing_team_game_record)
+        winning_team.update_record(season, winning_team_game_record)
+        losing_team.update_record(season, losing_team_game_record)
 
 
-def create_team(game_record):
+def get_team(game_record):
     team = None
 
     try:
         team = Team(game_record.team_name)
-    except Exception as winning_team_error:
-        print(f'could not create Team object ... FCS? or {winning_team_error}')
+    except Exception as get_team_error:
+        print(f'could not create Team object ... FCS? or {get_team_error}')
 
     return team
 
 
 def call_update(team, game_record, season):
-    try:
-        if team is not None:
+    # FCS teams should be None
+    if team is not None:
+        try:
             team.update_record(season, game_record)
-    except Exception as update_error:
-        print(f'could not write records... FCS? or {update_error}')
+        except Exception as update_error:
+            print(f'could not write records... FCS? or {update_error}')
 
 
 def extract_team_data(game_results):
     """extract information specific to each team"""
     winning_team = Team('')
     losing_team = Team('')
+
 
 def store_game_results(game_results):
     """store info in games database table"""

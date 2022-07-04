@@ -1,0 +1,42 @@
+[{
+  "id": 401112443,
+  "season": 2019,
+  "week": 2,
+  "season_type": "regular",
+  "start_date": "2019-09-08T00:00:00.000Z",
+  "start_time_tbd": null,
+  "neutral_site": false,
+  "conference_game": true,
+  "attendance": 50500,
+  "venue_id": 3787,
+  "venue": "Kenan Memorial Stadium",
+  "home_id": 153,
+  "home_team": "North Carolina",
+  "home_conference": "ACC",
+  "home_points": 28,
+  "home_line_scores": [
+    17,
+    0,
+    3,
+    8
+  ],
+  "home_post_win_prob": "0.2726687650778749",
+  "home_pregame_elo": 1424,
+  "home_postgame_elo": 1427,
+  "away_id": 2390,
+  "away_team": "Miami",
+  "away_conference": "ACC",
+  "away_points": 25,
+  "away_line_scores": [
+    3,
+    10,
+    6,
+    6
+  ],
+  "away_post_win_prob": "0.727331234922125",
+  "away_pregame_elo": 1606,
+  "away_postgame_elo": 1603,
+  "excitement_index": "8.08945067269999",
+  "highlights": "https://www.youtube.com/watch?v=2ZB89C2lK84",
+  "notes": null
+}]

@@ -1,6 +1,7 @@
 API Key: XNvoXV6PuAgCRpcNSuo9+nYU6xmWa/16GxJ+D8NLwKVS3zyjETQPatR7b6Hq92t4
+Postgres: port 5433
 db connection:
 user: postgres
-pwd: dbuser
+pwd: dbuser/postgres
 -
 -

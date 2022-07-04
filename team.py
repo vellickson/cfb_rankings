@@ -13,7 +13,7 @@ class Team:
         self.name = str(name)
         self.name = name.replace('\'', '\'\'')
 
-        self.conn = psycopg2.connect("dbname=cfb_rankings user=postgres password=postgres")
+        self.conn = psycopg2.connect("dbname='cfb_rankings' user='postgres' password='postgres' host='localhost' port=5433")
 
         self.team_id = self.get_team_id()
 
