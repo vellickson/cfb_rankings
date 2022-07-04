@@ -1,20 +1,17 @@
 create table season_opponents
 (
-    season_opponent_pk serial
-        constraint season_opponents_pk
+    season_opponent_id serial  not null
+        constraint season_opponents_id
             primary key,
     record_id          integer not null
-        constraint season_opponents_record_id__fk
+        constraint season_opponents_records_id_fk
             references records,
-    opponent_id        integer not null
-        constraint season_opponents_team_id__fk
+    opponent_id        integer
+        constraint season_opponents_teams_team_id_fk
             references teams
 );
 
 alter table season_opponents
     owner to postgres;
-
-create unique index season_opponents_season_opponent_pk_uindex
-    on season_opponents (season_opponent_pk);
 
 
