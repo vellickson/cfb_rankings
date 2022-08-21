@@ -16,6 +16,7 @@ class TeamRecord:
         self.point_diff = 0
         self.opponents = []
         self.season = 0
+        self.fcs_opponents = 0
 
     # TODO: get_opponents
     def get_opponents(self):

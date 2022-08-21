@@ -28,7 +28,7 @@ def get_weekly_game_results(season, week):
     #    json.dump(r.json(), f)
 
     # TESTING
-    with open('2019week2game1.json', 'r') as f:
+    with open('2019week2.json', 'r') as f:
         results_as_list = json.load(f)
 
     f.close()
@@ -37,16 +37,18 @@ def get_weekly_game_results(season, week):
     # results_as_list = r.json()
 
     for result in results_as_list:
+        # print(f'result {result}')
+        home_division = result.get('home_division')
+        if home_division == "fcs":
+            continue
 
         home_team = result.get('home_team')
         away_team = result.get('away_team')
         home_points = result.get('home_points')
         away_points = result.get('away_points')
         neutral_location = result.get('neutral_site')
-        winning_team = None
-        losing_team = None
 
-        # TODO: What to do with FCS teams?
+        # TODO: Handle FCS teams in a graceful manner
         if home_points > away_points:
             winning_team_game_record = GameRecord(home_team)
             losing_team_game_record = GameRecord(away_team)
@@ -74,31 +76,44 @@ def get_weekly_game_results(season, week):
         winning_team_game_record.set_win_loss_outcome(we_won=True)
         losing_team_game_record.set_win_loss_outcome(we_won=False)
 
+        # Get a team object to act upon if we can
         winning_team = get_team(winning_team_game_record)
         losing_team = get_team(losing_team_game_record)
 
-        winning_team.update_record(season, winning_team_game_record)
-        losing_team.update_record(season, losing_team_game_record)
+        # If we don't have a team object, assume FCS
+        if not winning_team:
+            losing_team_game_record.opponent = -1
+        else:
+            losing_team_game_record.opponent = winning_team.team_id
+
+        if not losing_team:
+            winning_team_game_record.opponent = -1
+        else:
+            winning_team_game_record.opponent = losing_team.team_id
+
+        if winning_team:
+            winning_team.update_record(season, winning_team_game_record)
+
+        if losing_team:
+            losing_team.update_record(season, losing_team_game_record)
 
 
 def get_team(game_record):
-    team = None
-
     try:
         team = Team(game_record.team_name)
+        return team
     except Exception as get_team_error:
-        print(f'could not create Team object ... FCS? or {get_team_error}')
+        print(f'could not create Team object ... is {game_record.team_name} in FCS?')
+        return None
 
-    return team
 
-
-def call_update(team, game_record, season):
-    # FCS teams should be None
-    if team is not None:
-        try:
-            team.update_record(season, game_record)
-        except Exception as update_error:
-            print(f'could not write records... FCS? or {update_error}')
+# def call_update(team, game_record, season):
+#     # FCS teams should be None
+#     if team is not None:
+#         try:
+#             team.update_record(season, game_record)
+#         except Exception as update_error:
+#             print(f'could not write records... FCS? or {update_error}')
 
 
 def extract_team_data(game_results):

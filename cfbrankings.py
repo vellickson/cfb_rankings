@@ -1,6 +1,7 @@
 import sys
 import getopt
 import games
+from rankings import Rankings
 
 
 def main(argv):
@@ -10,11 +11,11 @@ def main(argv):
     try:
         opts, args = getopt.getopt(argv, "hs:w:", ["season=", "week="])
     except getopt.GetoptError:
-        print('games.py -s <season as int> -w <week as int>')
+        print('cfbrankings.py -s <season as int> -w <week as int>')
         sys.exit(2)
     for opt, arg in opts:
         if opt == '-h':
-            print('games.py -s <season as int> -w <week as int>')
+            print('cfbrankings.py -s <season as int> -w <week as int>')
             sys.exit()
         elif opt in ("-s", "--season"):
             season = arg
@@ -22,7 +23,9 @@ def main(argv):
             week = arg
     print('Season is ', season)
     print('Week is ', week)
-    games.get_weekly_game_results(season, week)
+    # games.get_weekly_game_results(season, week)
+    rankings = Rankings('2019')
+    rankings.rank_teams()
 
 
 if __name__ == "__main__":

@@ -13,7 +13,9 @@ class Team:
         self.name = str(name)
         self.name = name.replace('\'', '\'\'')
 
-        self.conn = psycopg2.connect("dbname='cfb_rankings' user='postgres' password='postgres' host='localhost' port=5433")
+        self.conn = psycopg2.connect(
+            "dbname='cfb_rankings' user='postgres' password='postgres' host='localhost' port=5433"
+        )
 
         self.team_id = self.get_team_id()
 
@@ -34,20 +36,26 @@ class Team:
         """update the record associated with a team for a given season"""
         record_id = self.get_season_record(season)
 
-        print(f'record_id for {self.name}: {record_id}')
+        # print(f'record_id for {self.name}: {record_id}')
 
         sql_update_record = f"UPDATE records set {game_record.win_loss_type} = " \
-            f"{game_record.win_loss_type} + 1, point_diff = point_diff + {game_record.point_diff} " \
+            f"{game_record.win_loss_type} + 1, " \
+            f"point_diff = point_diff + {game_record.point_diff} " \
             f"WHERE record_id = {record_id}"
 
-        print(f'SQL: {sql_update_record}')
+        # print(f'update_record: {sql_update_record}')
 
-        sql_update_opponents = f"INSERT INTO season_opponents(record_id, opponent_id) VALUES({record_id}, " \
+        sql_update_opponents = f"INSERT INTO season_opponents(team_id, opponent_id) VALUES({self.team_id}, " \
                                f"{game_record.opponent})"
+
+        # print(f'game_record.opponent {game_record.opponent}')
+        # print(f'update_opponents {sql_update_opponents}')
 
         try:
             cur_update_record = self.conn.cursor()
             cur_update_record.execute(sql_update_record)
+            # self.conn.commit()
+            cur_update_record.execute(sql_update_opponents)
             self.conn.commit()
             cur_update_record.close()
         except Exception as error:
@@ -74,7 +82,7 @@ class Team:
 
     def create_season_record(self, season):
         """create a record for the season"""
-        print(f'create a new record for {self.name}')
+        # print(f'create a new record for {self.name}')
         sql_create_team_record = f'INSERT INTO records(team_id, season) VALUES({self.team_id}, {season}) ' \
                                  f'RETURNING record_id;'
         cur_create_team_record = self.conn.cursor()
