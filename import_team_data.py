@@ -5,7 +5,7 @@ with where I'm pulling game data
 import psycopg2
 import csv
 
-team_data_file = 'team_info_from_cfbd_2022.csv'
+team_data_file = 'team_data/team_info_from_cfbd_2022.csv'
 sql = """INSERT INTO teams(team_name, conference, cfbd_team_id, mascot, division, team_abbr, 
                             cfbd_venue_id, location_city, timezone, location_state, location_capacity, location_venue)
              VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"""

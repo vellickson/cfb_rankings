@@ -1,5 +1,5 @@
 """
-Determine rankings for each time
+Determine rankings for each team
 1. Foreach known team, get its aggregate win loss record and record of its opponents
 2. Calculate rankings
 3. Output list
@@ -80,13 +80,6 @@ class Rankings:
         conference = result[0][1]
         print(f'team_name: {team_name} conference: {conference}')
         return team_name
-
-    # def get_fcs_opponent_count(self, team_id):
-    #     sql_get_fcs_opponent_count = f"SELECT count(*) FROM season_opponents WHERE team_id = {team_id} and opponent_id = -1"
-    #     get_fcs_count_cursor = self.conn.cursor()
-    #     get_fcs_count_cursor.execute(sql_get_fcs_opponent_count)
-    #     count = get_fcs_count_cursor.fetchone()[0]
-    #     return count
 
     def get_opponents(self, record_id):
         fcs_count = 0

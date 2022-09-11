@@ -21,10 +21,10 @@ def main(argv):
             season = arg
         elif opt in ("-w", "--week"):
             week = arg
-    print('Season is ', season)
-    print('Week is ', week)
+    print(f'Season is {season}')
+    print(f'Week is {week}')
     # games.get_weekly_game_results(season, week)
-    rankings = Rankings('2022')
+    rankings = Rankings(season)
     rankings.rank_teams()
 
 
