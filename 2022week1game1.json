@@ -1,0 +1,46 @@
+[
+  {
+    "id": 401426532,
+    "season": 2022,
+    "week": 1,
+    "season_type": "regular",
+    "start_date": "2022-08-27T16:00:00.000Z",
+    "start_time_tbd": false,
+    "neutral_site": false,
+    "conference_game": false,
+    "attendance": null,
+    "venue_id": 3796,
+    "venue": "Houchens Industries-L. T. Smith Stadium",
+    "home_id": 98,
+    "home_team": "Western Kentucky",
+    "home_conference": "Conference USA",
+    "home_division": "fbs",
+    "home_points": 38,
+    "home_line_scores": [
+      7,
+      14,
+      0,
+      17
+    ],
+    "home_post_win_prob": "0.9542764266226265",
+    "home_pregame_elo": 1684,
+    "home_postgame_elo": 1684,
+    "away_id": 2046,
+    "away_team": "Austin Peay",
+    "away_conference": "Atlantic Sun",
+    "away_division": "fcs",
+    "away_points": 27,
+    "away_line_scores": [
+      10,
+      7,
+      3,
+      7
+    ],
+    "away_post_win_prob": "0.04572357337737354",
+    "away_pregame_elo": null,
+    "away_postgame_elo": null,
+    "excitement_index": "2.6135509766",
+    "highlights": null,
+    "notes": null
+  }
+]

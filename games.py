@@ -16,37 +16,41 @@ def get_weekly_game_results(season, week):
     """for given week, make an API call to get the info"""
 
     # PRODUCTION
-    url = f'https://api.collegefootballdata.com/games?year={season}&week={week}'
+    url = f'https://api.collegefootballdata.com/games?year={season}&week={week}&division=fbs'
     headers = {'Accept': 'application/json',
                'Authorization': 'Bearer XNvoXV6PuAgCRpcNSuo9+nYU6xmWa/16GxJ+D8NLwKVS3zyjETQPatR7b6Hq92t4'}
     # TODO: Add exception handling to api request and use status_code
-    # r = requests.get(url, headers=headers)
-    # print(r.status_code)
+    r = requests.get(url, headers=headers)
+    print(f'request status code: {r.status_code}')
 
-    # TESTING
+    # TESTING - writing to weekly file
     #with open('2019week1.json', 'w') as f:
     #    json.dump(r.json(), f)
 
-    # TESTING
-    with open('2019week2.json', 'r') as f:
-        results_as_list = json.load(f)
-
-    f.close()
+    # TESTING - reading from weekly file
+    # with open('2022week1.json', 'r') as f:
+    #     results_as_list = json.load(f)
+    #
+    # f.close()
 
     # PRODUCTION
-    # results_as_list = r.json()
+    results_as_list = r.json()
 
     for result in results_as_list:
         # print(f'result {result}')
-        home_division = result.get('home_division')
-        if home_division == "fcs":
-            continue
+        # home_division = result.get('home_division')
+        # if home_division == "fcs":
+        #     continue
 
         home_team = result.get('home_team')
         away_team = result.get('away_team')
         home_points = result.get('home_points')
         away_points = result.get('away_points')
         neutral_location = result.get('neutral_site')
+
+        if home_points is None or away_points is None:
+            print(f'ERROR: Missing point info for {result}')
+            continue
 
         # TODO: Handle FCS teams in a graceful manner
         if home_points > away_points:

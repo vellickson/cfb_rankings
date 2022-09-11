@@ -24,7 +24,7 @@ def main(argv):
     print('Season is ', season)
     print('Week is ', week)
     # games.get_weekly_game_results(season, week)
-    rankings = Rankings('2019')
+    rankings = Rankings('2022')
     rankings.rank_teams()
 
 

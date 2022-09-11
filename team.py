@@ -14,21 +14,21 @@ class Team:
         self.name = name.replace('\'', '\'\'')
 
         self.conn = psycopg2.connect(
-            "dbname='cfb_rankings' user='postgres' password='postgres' host='localhost' port=5433"
+            "dbname='cfb_rankings' user='postgres' password='postgres' host='localhost' port=5431"
         )
 
         self.team_id = self.get_team_id()
 
     def get_team_id(self):
-        sql_get_team_id = f"SELECT team_id from teams where team_name = '{self.name}'"
+        sql_get_team_id = f"SELECT team_id, conference from teams where team_name = '{self.name}'"
         team_id_cursor = self.conn.cursor()
         team_id_cursor.execute(sql_get_team_id)
         team_id = team_id_cursor.fetchone()[0]
+        # print(f'result of team_id: {team_id}')
         return team_id
 
     def get_win_loss(self):
         """sql call that returns wins and losses"""
-
 
     # def get_record_id(self, season):
 
@@ -45,7 +45,7 @@ class Team:
 
         # print(f'update_record: {sql_update_record}')
 
-        sql_update_opponents = f"INSERT INTO season_opponents(team_id, opponent_id) VALUES({self.team_id}, " \
+        sql_update_opponents = f"INSERT INTO season_opponents(record_id, opponent_id) VALUES({record_id}, " \
                                f"{game_record.opponent})"
 
         # print(f'game_record.opponent {game_record.opponent}')
