@@ -1,7 +1,7 @@
 """
 Team info and methods to update that data
 """
-# from team_record import TeamRecord
+from team_record import TeamRecord
 from game_record import GameRecord
 import psycopg2
 import sys
@@ -10,19 +10,34 @@ from env import CONNECTION_STRING
 
 class Team:
 
-    def __init__(self, name):
-        self.name = str(name).replace('\'', '\'\'')
+    def __init__(self, season, name=None, team_id=None):
         self.conn = psycopg2.connect(CONNECTION_STRING)
-        self.team_id = self.get_team_id()
+        self.season = season
+        if name:
+            self.name = str(name).replace('\'', '\'\'')
+        else:
+            self.name = None
+        self.team_id = team_id
+        self.get_team_info()
+        self.team_record = self.get_season_record()
 
-    def get_team_id(self):
-        sql_get_team_id = f"SELECT team_id, conference from teams where team_name = '{self.name}'"
+    def get_team_info(self):
+        sql_get_team = None
+        if self.name:
+            sql_get_team = f"SELECT * from teams where team_name = '{self.name}'"
+        elif self.team_id:
+            sql_get_team = f"SELECT * from teams where team_id = {self.team_id}"
         team_id_cursor = self.conn.cursor()
-        team_id_cursor.execute(sql_get_team_id)
-        team_id = team_id_cursor.fetchone()[0]
+        team_id_cursor.execute(sql_get_team)
+        result = team_id_cursor.fetchone()
+        # print(f'result: {result}')
+        self.team_id = result[0]
+        self.name = result[1]
         team_id_cursor.close()
-        # print(f'result of team_id: {team_id}')
-        return team_id
+
+    def get_season_record(self):
+        return TeamRecord(self.team_id, self.season)
+
 
     def get_win_loss(self):
         """sql call that returns wins and losses"""
@@ -35,7 +50,7 @@ class Team:
 
         # print(f'record_id for {self.name}: {record_id}')
 
-        sql_update_record = f"UPDATE records set {game_record.win_loss_type} = " \
+        sql_update_record = f"UPDATE team_records set {game_record.win_loss_type} = " \
             f"{game_record.win_loss_type} + 1, " \
             f"point_diff = point_diff + {game_record.point_diff} " \
             f"WHERE record_id = {record_id}"
@@ -58,28 +73,28 @@ class Team:
             print(f'Unable to update game record for {self.name} using this statement: {sql_update_record} because'
                   f'of {error}')
 
-    def get_season_record(self, season):
-        """retrieve season record"""
-        sql_get_team_record = f"SELECT record_id FROM records WHERE team_id = {self.team_id} AND season = {season}"
-        cur_get_team_record = self.conn.cursor()
-
-        try:
-            cur_get_team_record.execute(sql_get_team_record)
-        except Exception as error:
-            print(f'unable to retrieve season record_id: {error}')
-
-        if cur_get_team_record.rowcount != 0:
-            record_id = cur_get_team_record.fetchone()[0]
-            cur_get_team_record.close()
-        else:
-            record_id = self.create_season_record(season)
-
-        return record_id
+    # def get_season_record(self, season):
+    #     """retrieve season record"""
+    #     sql_get_team_record = f"SELECT record_id FROM records WHERE team_id = {self.team_id} AND season = {season}"
+    #     cur_get_team_record = self.conn.cursor()
+    #
+    #     try:
+    #         cur_get_team_record.execute(sql_get_team_record)
+    #     except Exception as error:
+    #         print(f'unable to retrieve season record_id: {error}')
+    #
+    #     if cur_get_team_record.rowcount != 0:
+    #         record_id = cur_get_team_record.fetchone()[0]
+    #         cur_get_team_record.close()
+    #     else:
+    #         record_id = self.create_season_record(season)
+    #
+    #     return record_id
 
     def create_season_record(self, season):
         """create a record for the season"""
         # print(f'create a new record for {self.name}')
-        sql_create_team_record = f'INSERT INTO records(team_id, season) VALUES({self.team_id}, {season}) ' \
+        sql_create_team_record = f'INSERT INTO team_records (team_id, season) VALUES({self.team_id}, {season}) ' \
                                  f'RETURNING record_id;'
         cur_create_team_record = self.conn.cursor()
 

@@ -81,8 +81,8 @@ def get_weekly_game_results(season, week):
         losing_team_game_record.set_win_loss_outcome(we_won=False)
 
         # Get a team object to act upon if we can
-        winning_team = get_team(winning_team_game_record)
-        losing_team = get_team(losing_team_game_record)
+        winning_team = get_team(winning_team_game_record, season)
+        losing_team = get_team(losing_team_game_record, season)
 
         # If we don't have a team object, assume FCS
         if not winning_team:
@@ -102,12 +102,12 @@ def get_weekly_game_results(season, week):
             losing_team.update_record(season, losing_team_game_record)
 
 
-def get_team(game_record):
+def get_team(game_record, season):
     try:
-        team = Team(game_record.team_name)
+        team = Team(season, name=game_record.team_name)
         return team
     except Exception as get_team_error:
-        print(f'could not create Team object ... is {game_record.team_name} in FCS?')
+        print(f'could not get Team object ... is {game_record.team_name} in FCS?')
         return None
 
 
@@ -118,12 +118,6 @@ def get_team(game_record):
 #             team.update_record(season, game_record)
 #         except Exception as update_error:
 #             print(f'could not write records... FCS? or {update_error}')
-
-
-def extract_team_data(game_results):
-    """extract information specific to each team"""
-    winning_team = Team('')
-    losing_team = Team('')
 
 
 def store_game_results(game_results):

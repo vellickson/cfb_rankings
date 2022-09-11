@@ -1,38 +1,59 @@
 """
 Determine rankings for each team
-1. Foreach known team, get its aggregate win loss record and record of its opponents
+1. Foreach known team, get its aggregate win loss record and the win loss record of its opponents
 2. Calculate rankings
 3. Output list
 """
 
 import psycopg2
 from env import CONNECTION_STRING
-from team_record import TeamRecord
 from team import Team
 
 
 class Rankings:
     def __init__(self, season):
         self.season = season
-        self.conn = psycopg2.connect(
-            CONNECTION_STRING
-        )
+        self.conn = psycopg2.connect(CONNECTION_STRING)
 
     def rank_teams(self):
         # Iterate through each team and aggregate their wins/losses
-        print('season, ', self.season)
-        sql_get_teams = f"SELECT * FROM teams"
+        sql_get_teams = f"SELECT team_id FROM teams"
         get_teams_cursor = self.conn.cursor()
         get_teams_cursor.execute(sql_get_teams)
         results = get_teams_cursor.fetchall()
+        compiled_results = []
         for result in results:
+            compiled_result = None
             # print(result[0])
-            # team_id = result[0]
-            team = Team(result[1])
-            team_record = TeamRecord(team, self.season)
-            team_record.get_record()
-            print('total wins: ', team_record.get_total_wins())
+            team_id = result[0]
+            # print(result[0])
+            team = Team(self.season, team_id=team_id)
+
+            # this should be a list of Team objects
+            opponents = self.get_opponents(team.team_record.record_id)
+            # opponents = self.get_opponents(record_id)
+            compiled_result = {"name": team.name,
+                               "wins": team.team_record.get_total_wins(),
+                               "losses": team.team_record.get_total_losses(),
+                               "point_diff": team.team_record.point_diff,
+                               "fcs_count": opponents['fcs_count'],
+                               "opponents": opponents['opponents']
+                               }
+            compiled_results.append(compiled_result)
             break
+
+        print(compiled_results[0])
+        compiled_results.sort(key=lambda x: (-x.wins, x.losses, x.fcs_opponents, -x.point_diff))
+        for record in compiled_results:
+            print(f"{record.name}, {record.wins}, {record.losses}, {record.fcs_opponents}, {record.point_diff}")
+
+            # team_record.power_five_opponents = opponents['power_five']
+
+            # print(f'team: {team_name} '
+            #       f'wins: {team_record.get_total_wins()} '
+            #       f'losses: {team_record.get_total_losses()} '
+            #       f'point_diff: {team_record.point_diff}')
+            # team_records.append(team_record)
 
         # # Iterate through each record and aggregate wins/losses
         # sql_get_record = f"SELECT * FROM records where season = {self.season}"
@@ -85,63 +106,40 @@ class Rankings:
         #           f'{team_record.fcs_opponents},',
         #           *team_record.opponents, sep=' ')
 
-    def get_team_name(self, team_id):
-        sql_get_team = f"SELECT team_name, conference FROM teams where team_id = {team_id}"
-        # print(f'sql_get_team {sql_get_team}')
-        get_team_cursor = self.conn.cursor()
-        get_team_cursor.execute(sql_get_team)
-        team_name = get_team_cursor.fetchone()[0]
-        # result = get_team_cursor.fetchall()
-        # team_name = result[0][0]
-        # conference = result[0][1]
-        # print(f'team_name: {team_name} conference: {conference}')
-        return team_name
+    # def get_team_name(self, team_id):
+    #     sql_get_team = f"SELECT team_name, conference FROM teams where team_id = {team_id}"
+    #     # print(f'sql_get_team {sql_get_team}')
+    #     get_team_cursor = self.conn.cursor()
+    #     get_team_cursor.execute(sql_get_team)
+    #     team_name = get_team_cursor.fetchone()[0]
+    #     # result = get_team_cursor.fetchall()
+    #     # team_name = result[0][0]
+    #     # conference = result[0][1]
+    #     # print(f'team_name: {team_name} conference: {conference}')
+    #     return team_name
 
     def get_opponents(self, record_id):
         fcs_count = 0
         opponents = []
 
-        sql_get_opponent_names = f"SELECT * FROM season_opponents WHERE record_id = {record_id}"
+        sql_get_opponents = f"SELECT * FROM season_opponents WHERE record_id = {record_id}"
         get_opponents_cursor = self.conn.cursor()
-        get_opponents_cursor.execute(sql_get_opponent_names)
+        get_opponents_cursor.execute(sql_get_opponents)
 
-        opponent_results = get_opponents_cursor.fetchall()
+        results = get_opponents_cursor.fetchall()
 
-        for result in opponent_results:
-            print(f'opponent {result}')
-            opponent_id = result[2]
-            if opponent_id == -1:
-                fcs_count += 1
-            else:
-                opponent_name = self.get_team_name(opponent_id)
-                opponent = Team(opponent_name)
-                opponents.append(opponent)
-
-        result = {"fcs_count": fcs_count, "opponents": opponents}
-        # print(f'result {result}')
-        return result
-
-    def get_opponent_names(self, record_id):
-        fcs_count = 0
-        opponent_names = []
-
-        sql_get_opponent_names = f"SELECT * FROM season_opponents WHERE record_id = {record_id}"
-        get_opponents_cursor = self.conn.cursor()
-        get_opponents_cursor.execute(sql_get_opponent_names)
-
-        opponent_results = get_opponents_cursor.fetchall()
-
-        for result in opponent_results:
+        for result in results:
             # print(f'opponent {result}')
-            opponent_id = result[2]
+            opponent_id = result[1]
             if opponent_id == -1:
                 fcs_count += 1
             else:
-                opponent_name = self.get_team_name(opponent_id)
-                opponent = Team(opponent_name)
-                opponent_names.append(opponent.name)
+                opponent = Team(self.season, team_id=opponent_id)
+                opponent_win_loss = f'{opponent.team_record.get_total_wins()} - {opponent.team_record.get_total_losses()}'
+                opponent_str = f'{opponent.name} ({opponent_win_loss})'
+                opponents.append(opponent_str)
 
         # print(f'opponent_names {opponent_names}')
-        result = {"fcs_count": fcs_count, "opponents": opponent_names}
+        result = {"fcs_count": fcs_count, "opponents": opponents}
         # print(f'result {result}')
         return result
