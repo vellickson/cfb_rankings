@@ -1,7 +1,7 @@
 """
 Team info and methods to update that data
 """
-from team_record import TeamRecord
+# from team_record import TeamRecord
 from game_record import GameRecord
 import psycopg2
 import sys

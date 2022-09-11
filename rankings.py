@@ -19,56 +19,71 @@ class Rankings:
         )
 
     def rank_teams(self):
-        # Iterate through each record and aggregate wins/losses
-        sql_get_record = f"SELECT * FROM records where season = season"
-        get_record_cursor = self.conn.cursor()
-        get_record_cursor.execute(sql_get_record)
-        # print(f'cursor_description {get_record_cursor.description}')
-        columns = get_record_cursor.description
-        team_records = []
+        # Iterate through each team and aggregate their wins/losses
+        print('season, ', self.season)
+        sql_get_teams = f"SELECT * FROM teams"
+        get_teams_cursor = self.conn.cursor()
+        get_teams_cursor.execute(sql_get_teams)
+        results = get_teams_cursor.fetchall()
+        for result in results:
+            # print(result[0])
+            # team_id = result[0]
+            team = Team(result[1])
+            team_record = TeamRecord(team, self.season)
+            team_record.get_record()
+            print('total wins: ', team_record.get_total_wins())
+            break
 
-        # print(f'col 0 {columns[0].name}')
-        for record in get_record_cursor:
-            team_id = record[0]
-            # print(f'team_id {team_id}')
-            team_name = self.get_team_name(team_id)
-            team_record = TeamRecord(team_name)
-
-            team_record.home_wins = record[1]
-            team_record.away_wins = record[3]
-            team_record.neutral_wins = record[5]
-
-            team_record.home_losses = record[2]
-            team_record.away_losses = record[4]
-            team_record.neutral_losses = record[6]
-
-            team_record.point_diff = record[8]
-            record_id = record[7]
-
-            # this should be a list of Team objects
-            opponents = self.get_opponent_names(record_id)
-            # opponents = self.get_opponents(record_id)
-            team_record.fcs_opponents = opponents['fcs_count']
-            team_record.opponents = opponents['opponents']
-            # team_record.power_five_opponents = opponents['power_five']
-
-            # print(f'team: {team_name} '
-            #       f'wins: {team_record.get_total_wins()} '
-            #       f'losses: {team_record.get_total_losses()} '
-            #       f'point_diff: {team_record.point_diff}')
-            team_records.append(team_record)
-            # break
-
-        # print('count of team_records', len(team_records))
-        team_records.sort(key=lambda x: (-x.get_total_wins(), x.get_total_losses(), x.fcs_opponents, -x.point_diff))
-        print('team, wins, losses, point_diff, fcs_opponent_count, opponents')
-        for team_record in team_records:
-            print(f'{team_record.team_name},'
-                  f'{team_record.get_total_wins()},'
-                  f'{team_record.get_total_losses()},'
-                  f'{team_record.point_diff},'
-                  f'{team_record.fcs_opponents},',
-                  *team_record.opponents, sep=' ')
+        # # Iterate through each record and aggregate wins/losses
+        # sql_get_record = f"SELECT * FROM records where season = {self.season}"
+        # get_record_cursor = self.conn.cursor()
+        # get_record_cursor.execute(sql_get_record)
+        # # print(f'cursor_description {get_record_cursor.description}')
+        # columns = get_record_cursor.description
+        # team_records = []
+        #
+        # # print(f'col 0 {columns[0].name}')
+        # for record in get_record_cursor:
+        #     team_id = record[0]
+        #     # print(f'team_id {team_id}')
+        #     team_name = self.get_team_name(team_id)
+        #     team_record = TeamRecord(team_name, self.season)
+        #
+        #     team_record.home_wins = record[1]
+        #     team_record.away_wins = record[3]
+        #     team_record.neutral_wins = record[5]
+        #
+        #     team_record.home_losses = record[2]
+        #     team_record.away_losses = record[4]
+        #     team_record.neutral_losses = record[6]
+        #
+        #     team_record.point_diff = record[8]
+        #     record_id = record[7]
+        #
+        #     # this should be a list of Team objects
+        #     opponents = self.get_opponent_names(record_id)
+        #     # opponents = self.get_opponents(record_id)
+        #     team_record.fcs_opponents = opponents['fcs_count']
+        #     team_record.opponents = opponents['opponents']
+        #     # team_record.power_five_opponents = opponents['power_five']
+        #
+        #     # print(f'team: {team_name} '
+        #     #       f'wins: {team_record.get_total_wins()} '
+        #     #       f'losses: {team_record.get_total_losses()} '
+        #     #       f'point_diff: {team_record.point_diff}')
+        #     team_records.append(team_record)
+        #     # break
+        #
+        # # print('count of team_records', len(team_records))
+        # team_records.sort(key=lambda x: (-x.get_total_wins(), x.get_total_losses(), x.fcs_opponents, -x.point_diff))
+        # print('team, wins, losses, point_diff, fcs_opponent_count, opponents')
+        # for team_record in team_records:
+        #     print(f'{team_record.team_name},'
+        #           f'{team_record.get_total_wins()},'
+        #           f'{team_record.get_total_losses()},'
+        #           f'{team_record.point_diff},'
+        #           f'{team_record.fcs_opponents},',
+        #           *team_record.opponents, sep=' ')
 
     def get_team_name(self, team_id):
         sql_get_team = f"SELECT team_name, conference FROM teams where team_id = {team_id}"
