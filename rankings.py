@@ -23,14 +23,14 @@ class Rankings:
         sql_get_record = f"SELECT * FROM records where season = season"
         get_record_cursor = self.conn.cursor()
         get_record_cursor.execute(sql_get_record)
-        print(f'cursor_description {get_record_cursor.description}')
+        # print(f'cursor_description {get_record_cursor.description}')
         columns = get_record_cursor.description
         team_records = []
 
         # print(f'col 0 {columns[0].name}')
         for record in get_record_cursor:
             team_id = record[0]
-            print(f'team_id {team_id}')
+            # print(f'team_id {team_id}')
             team_name = self.get_team_name(team_id)
             team_record = TeamRecord(team_name)
 
@@ -57,7 +57,7 @@ class Rankings:
             #       f'losses: {team_record.get_total_losses()} '
             #       f'point_diff: {team_record.point_diff}')
             team_records.append(team_record)
-            break
+            # break
 
         # print('count of team_records', len(team_records))
         team_records.sort(key=lambda x: (-x.get_total_wins(), x.get_total_losses(), x.fcs_opponents, -x.point_diff))
@@ -72,14 +72,14 @@ class Rankings:
 
     def get_team_name(self, team_id):
         sql_get_team = f"SELECT team_name, conference FROM teams where team_id = {team_id}"
-        print(f'sql_get_team {sql_get_team}')
+        # print(f'sql_get_team {sql_get_team}')
         get_team_cursor = self.conn.cursor()
         get_team_cursor.execute(sql_get_team)
-        # team_name = get_team_cursor.fetchone()[0]
-        result = get_team_cursor.fetchall()
-        team_name = result[0][0]
-        conference = result[0][1]
-        print(f'team_name: {team_name} conference: {conference}')
+        team_name = get_team_cursor.fetchone()[0]
+        # result = get_team_cursor.fetchall()
+        # team_name = result[0][0]
+        # conference = result[0][1]
+        # print(f'team_name: {team_name} conference: {conference}')
         return team_name
 
     def get_opponents(self, record_id):
@@ -117,7 +117,7 @@ class Rankings:
         opponent_results = get_opponents_cursor.fetchall()
 
         for result in opponent_results:
-            print(f'opponent {result}')
+            # print(f'opponent {result}')
             opponent_id = result[2]
             if opponent_id == -1:
                 fcs_count += 1

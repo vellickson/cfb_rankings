@@ -7,14 +7,12 @@ import psycopg2
 import sys
 from env import CONNECTION_STRING
 
+
 class Team:
 
     def __init__(self, name):
-        self.name = str(name)
-        self.name = name.replace('\'', '\'\'')
-
+        self.name = str(name).replace('\'', '\'\'')
         self.conn = psycopg2.connect(CONNECTION_STRING)
-
         self.team_id = self.get_team_id()
 
     def get_team_id(self):
@@ -22,6 +20,7 @@ class Team:
         team_id_cursor = self.conn.cursor()
         team_id_cursor.execute(sql_get_team_id)
         team_id = team_id_cursor.fetchone()[0]
+        team_id_cursor.close()
         # print(f'result of team_id: {team_id}')
         return team_id
 
@@ -52,7 +51,6 @@ class Team:
         try:
             cur_update_record = self.conn.cursor()
             cur_update_record.execute(sql_update_record)
-            # self.conn.commit()
             cur_update_record.execute(sql_update_opponents)
             self.conn.commit()
             cur_update_record.close()
