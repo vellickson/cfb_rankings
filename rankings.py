@@ -6,6 +6,7 @@ Determine rankings for each team
 """
 
 import psycopg2
+from env import CONNECTION_STRING
 from team_record import TeamRecord
 from team import Team
 
@@ -14,7 +15,7 @@ class Rankings:
     def __init__(self, season):
         self.season = season
         self.conn = psycopg2.connect(
-            "dbname='cfb_rankings' user='postgres' password='postgres' host='localhost' port=5431"
+            CONNECTION_STRING
         )
 
     def rank_teams(self):
@@ -56,9 +57,9 @@ class Rankings:
             #       f'losses: {team_record.get_total_losses()} '
             #       f'point_diff: {team_record.point_diff}')
             team_records.append(team_record)
-            # break
+            break
 
-        print('count of team_records', len(team_records))
+        # print('count of team_records', len(team_records))
         team_records.sort(key=lambda x: (-x.get_total_wins(), x.get_total_losses(), x.fcs_opponents, -x.point_diff))
         print('team, wins, losses, point_diff, fcs_opponent_count, opponents')
         for team_record in team_records:
@@ -122,8 +123,8 @@ class Rankings:
                 fcs_count += 1
             else:
                 opponent_name = self.get_team_name(opponent_id)
-                # opponent = Team(opponent_name)
-                opponent_names.append(opponent_name)
+                opponent = Team(opponent_name)
+                opponent_names.append(opponent.name)
 
         # print(f'opponent_names {opponent_names}')
         result = {"fcs_count": fcs_count, "opponents": opponent_names}

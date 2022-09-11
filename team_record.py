@@ -23,10 +23,11 @@ class TeamRecord:
         return self.opponents
 
     def get_total_wins(self):
-        """aggregate home/away/neutral wins and losses"""
+        """aggregate home/away/neutral wins"""
         return self.home_wins + self.away_wins + self.neutral_wins
 
     def get_total_losses(self):
+        """aggregate home/away/neutral losses"""
         return self.home_losses + self.away_losses + self.neutral_losses
 
 

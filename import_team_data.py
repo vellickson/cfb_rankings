@@ -4,13 +4,14 @@ with where I'm pulling game data
 """
 import psycopg2
 import csv
+from env import CONNECTION_STRING
 
 team_data_file = 'team_data/team_info_from_cfbd_2022.csv'
 sql = """INSERT INTO teams(team_name, conference, cfbd_team_id, mascot, division, team_abbr, 
                             cfbd_venue_id, location_city, timezone, location_state, location_capacity, location_venue)
              VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);"""
 
-conn = psycopg2.connect("dbname='cfb_rankings' user='postgres' password='postgres' host='localhost' port=5431")
+conn = psycopg2.connect(CONNECTION_STRING)
 cur = conn.cursor()
 
 with open(team_data_file, newline='', encoding='utf-8-sig') as f:
