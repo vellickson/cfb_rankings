@@ -20,21 +20,21 @@ def get_weekly_game_results(season, week):
     headers = {'Accept': 'application/json',
                'Authorization': 'Bearer XNvoXV6PuAgCRpcNSuo9+nYU6xmWa/16GxJ+D8NLwKVS3zyjETQPatR7b6Hq92t4'}
     # TODO: Add exception handling to api request and use status_code
-    r = requests.get(url, headers=headers)
-    print(f'request status code: {r.status_code}')
+    # r = requests.get(url, headers=headers)
+    # print(f'request status code: {r.status_code}')
 
     # TESTING - writing to weekly file
     #with open('2019week1.json', 'w') as f:
     #    json.dump(r.json(), f)
 
     # TESTING - reading from weekly file
-    # with open('2022week1.json', 'r') as f:
-    #     results_as_list = json.load(f)
-    #
-    # f.close()
+    with open('game_data/2022week1.json', 'r') as f:
+        results_as_list = json.load(f)
+
+    f.close()
 
     # PRODUCTION
-    results_as_list = r.json()
+    # results_as_list = r.json()
 
     for result in results_as_list:
         # print(f'result {result}')
@@ -96,10 +96,19 @@ def get_weekly_game_results(season, week):
             winning_team_game_record.opponent = losing_team.team_id
 
         if winning_team:
+            print(f'winning_team.team_record {winning_team.team_record}')
+            if winning_team.team_record is None:
+                print(f'creating record for {winning_team.name}')
+                winning_team.create_season_record(season)
+
             winning_team.update_record(season, winning_team_game_record)
 
         if losing_team:
+            if losing_team.team_record is None:
+                losing_team.create_season_record(season)
+
             losing_team.update_record(season, losing_team_game_record)
+        break
 
 
 def get_team(game_record, season):

@@ -37,18 +37,23 @@ class TeamRecord:
         get_record_cursor = self.conn.cursor()
         get_record_cursor.execute(sql_get_record)
         record = get_record_cursor.fetchone()
-        # print('record: ', record)
+        print('record: ', record)
 
-        self.home_wins = record[1]
-        self.away_wins = record[3]
-        self.neutral_wins = record[5]
+        if record is not None:
+            self.home_wins = record[1]
+            self.away_wins = record[3]
+            self.neutral_wins = record[5]
 
-        self.home_losses = record[2]
-        self.away_losses = record[4]
-        self.neutral_losses = record[6]
+            self.home_losses = record[2]
+            self.away_losses = record[4]
+            self.neutral_losses = record[6]
 
-        self.record_id = record[7]
-        self.point_diff = record[8]
+            self.record_id = record[7]
+            self.point_diff = record[8]
+        else:
+            return None
+        # except Exception as e:
+        #     print(f'error with query {sql_get_record}, returned result {record}, error: {e}')
 
 
 

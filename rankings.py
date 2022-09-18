@@ -22,7 +22,9 @@ class Rankings:
         get_teams_cursor.execute(sql_get_teams)
         results = get_teams_cursor.fetchall()
         compiled_results = []
+        i = 0
         for result in results:
+            i += 1
             compiled_result = None
             # print(result[0])
             team_id = result[0]
@@ -40,12 +42,21 @@ class Rankings:
                                "opponents": opponents['opponents']
                                }
             compiled_results.append(compiled_result)
-            break
+            if i > 131:
+                break
+            # break
 
-        print(compiled_results[0])
-        compiled_results.sort(key=lambda x: (-x.wins, x.losses, x.fcs_opponents, -x.point_diff))
+        compiled_results.sort(key=lambda x: (-x["wins"], x["losses"], x["fcs_count"], -x["point_diff"]))
         for record in compiled_results:
-            print(f"{record.name}, {record.wins}, {record.losses}, {record.fcs_opponents}, {record.point_diff}")
+            # print(f"record: {record}")
+            print('name, wins, losses, fcs_count, point_diff, opponents')
+            print(
+                f"{record['name']}, "
+                f"{record['wins']}, "
+                f"{record['losses']}, "
+                f"{record['fcs_count']}, "
+                f"{record['point_diff']}, "
+                f"{record['opponents']}")
 
             # team_record.power_five_opponents = opponents['power_five']
 
@@ -130,7 +141,7 @@ class Rankings:
 
         for result in results:
             # print(f'opponent {result}')
-            opponent_id = result[1]
+            opponent_id = result[2]
             if opponent_id == -1:
                 fcs_count += 1
             else:

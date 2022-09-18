@@ -30,14 +30,19 @@ class Team:
         team_id_cursor = self.conn.cursor()
         team_id_cursor.execute(sql_get_team)
         result = team_id_cursor.fetchone()
+        # print(f'sql: {sql_get_team}')
         # print(f'result: {result}')
         self.team_id = result[0]
         self.name = result[1]
         team_id_cursor.close()
 
     def get_season_record(self):
-        return TeamRecord(self.team_id, self.season)
-
+        record = TeamRecord(self.team_id, self.season)
+        if record is not None:
+            print('record is not None')
+            return record
+        else:
+            return None
 
     def get_win_loss(self):
         """sql call that returns wins and losses"""
@@ -46,8 +51,8 @@ class Team:
 
     def update_record(self, season, game_record):
         """update the record associated with a team for a given season"""
-        record_id = self.get_season_record(season)
-
+        record_id = self.get_season_record().record_id
+        print(f'record_id {record_id}')
         # print(f'record_id for {self.name}: {record_id}')
 
         sql_update_record = f"UPDATE team_records set {game_record.win_loss_type} = " \
