@@ -38,8 +38,9 @@ class Team:
 
     def get_season_record(self):
         record = TeamRecord(self.team_id, self.season)
-        if record is not None:
-            print('record is not None')
+        # print(f'record from team.get_season_record {record}')
+        if record.record_id != 0:
+            # print('record is not None')
             return record
         else:
             return None
@@ -52,7 +53,6 @@ class Team:
     def update_record(self, season, game_record):
         """update the record associated with a team for a given season"""
         record_id = self.get_season_record().record_id
-        print(f'record_id {record_id}')
         # print(f'record_id for {self.name}: {record_id}')
 
         sql_update_record = f"UPDATE team_records set {game_record.win_loss_type} = " \

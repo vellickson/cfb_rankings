@@ -23,9 +23,9 @@ def main(argv):
             week = arg
     print(f'Season is {season}')
     print(f'Week is {week}')
-    games.get_weekly_game_results(season, week)
-    # rankings = Rankings(season)
-    # rankings.rank_teams()
+    # games.get_weekly_game_results(season, week)
+    rankings = Rankings(season)
+    rankings.rank_teams()
 
 
 if __name__ == "__main__":

@@ -37,7 +37,7 @@ class TeamRecord:
         get_record_cursor = self.conn.cursor()
         get_record_cursor.execute(sql_get_record)
         record = get_record_cursor.fetchone()
-        print('record: ', record)
+        # print('record from team_record.get_record: ', record)
 
         if record is not None:
             self.home_wins = record[1]

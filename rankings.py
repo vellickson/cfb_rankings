@@ -39,6 +39,8 @@ class Rankings:
                                "losses": team.team_record.get_total_losses(),
                                "point_diff": team.team_record.point_diff,
                                "fcs_count": opponents['fcs_count'],
+                               "opponent_total_wins": opponents['opponent_total_wins'],
+                               "opponent_total_losses": opponents['opponent_total_losses'],
                                "opponents": opponents['opponents']
                                }
             compiled_results.append(compiled_result)
@@ -46,15 +48,18 @@ class Rankings:
                 break
             # break
 
-        compiled_results.sort(key=lambda x: (-x["wins"], x["losses"], x["fcs_count"], -x["point_diff"]))
+        compiled_results.sort(key=lambda x: (
+            -x["wins"], x["losses"], x["fcs_count"], -x["opponent_total_wins"], x["opponent_total_losses"], -x["point_diff"]))
+        print('name, wins, losses, fcs_count, opponent_total_wins, opponent_total_losses, point_diff, opponents')
         for record in compiled_results:
             # print(f"record: {record}")
-            print('name, wins, losses, fcs_count, point_diff, opponents')
             print(
                 f"{record['name']}, "
                 f"{record['wins']}, "
                 f"{record['losses']}, "
                 f"{record['fcs_count']}, "
+                f"{record['opponent_total_wins']}, "
+                f"{record['opponent_total_losses']}, "
                 f"{record['point_diff']}, "
                 f"{record['opponents']}")
 
@@ -138,6 +143,8 @@ class Rankings:
         get_opponents_cursor.execute(sql_get_opponents)
 
         results = get_opponents_cursor.fetchall()
+        total_opponent_wins = 0
+        total_opponent_losses = 0
 
         for result in results:
             # print(f'opponent {result}')
@@ -146,11 +153,20 @@ class Rankings:
                 fcs_count += 1
             else:
                 opponent = Team(self.season, team_id=opponent_id)
-                opponent_win_loss = f'{opponent.team_record.get_total_wins()} - {opponent.team_record.get_total_losses()}'
+                opponent_wins = opponent.team_record.get_total_wins()
+                opponent_losses = opponent.team_record.get_total_losses()
+                opponent_win_loss = f'{opponent_wins} - {opponent_losses}'
                 opponent_str = f'{opponent.name} ({opponent_win_loss})'
                 opponents.append(opponent_str)
+                total_opponent_wins += opponent_wins
+                total_opponent_losses += opponent_losses
 
         # print(f'opponent_names {opponent_names}')
-        result = {"fcs_count": fcs_count, "opponents": opponents}
+        result = {
+            "fcs_count": fcs_count,
+            "opponents": opponents,
+            "opponent_total_wins": total_opponent_wins,
+            "opponent_total_losses": total_opponent_losses
+        }
         # print(f'result {result}')
         return result
