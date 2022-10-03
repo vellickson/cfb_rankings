@@ -1,132 +1,133 @@
-name, wins, losses, fcs_count, opponent_total_wins, opponent_total_losses, point_diff, opponents
-Penn State, 4, 0, 0, 8, 8, 88, ['Purdue (2 - 2)', 'Ohio (2 - 2)', 'Auburn (3 - 1)', 'Central Michigan (1 - 3)']
-Alabama, 4, 0, 0, 8, 9, 164, ['Utah State (1 - 3)', 'Texas (2 - 2)', 'Louisiana Monroe (2 - 2)', 'Vanderbilt (3 - 2)']
-USC, 4, 0, 0, 7, 7, 96, ['Rice (2 - 2)', 'Stanford (1 - 2)', 'Fresno State (1 - 2)', 'Oregon State (3 - 1)']
-Ohio State, 4, 0, 0, 7, 9, 131, ['Notre Dame (2 - 2)', 'Arkansas State (1 - 3)', 'Toledo (2 - 2)', 'Wisconsin (2 - 2)']
-Tennessee, 4, 0, 0, 7, 9, 118, ['Ball State (1 - 3)', 'Pittsburgh (3 - 1)', 'Akron (1 - 3)', 'Florida (2 - 2)']
-Syracuse, 4, 0, 0, 7, 10, 63, ['Louisville (2 - 2)', 'Connecticut (1 - 4)', 'Purdue (2 - 2)', 'Virginia (2 - 2)']
-Michigan, 4, 0, 0, 5, 13, 156, ['Colorado State (0 - 4)', "Hawai'i (1 - 4)", 'Connecticut (1 - 4)', 'Maryland (3 - 1)']
-Kansas, 4, 0, 1, 7, 5, 85, ['West Virginia (2 - 2)', 'Houston (2 - 2)', 'Duke (3 - 1)']
-Georgia, 4, 0, 1, 6, 6, 137, ['Oregon (3 - 1)', 'South Carolina (2 - 2)', 'Kent State (1 - 3)']
-Florida State, 4, 0, 1, 6, 6, 75, ['LSU (3 - 1)', 'Louisville (2 - 2)', 'Boston College (1 - 3)']
-NC State, 4, 0, 1, 6, 7, 97, ['East Carolina (2 - 2)', 'Texas Tech (3 - 1)', 'Connecticut (1 - 4)']
-Ole Miss, 4, 0, 1, 5, 7, 124, ['Troy (2 - 2)', 'Georgia Tech (1 - 3)', 'Tulsa (2 - 2)']
-Clemson, 4, 0, 1, 5, 7, 88, ['Georgia Tech (1 - 3)', 'Louisiana Tech (1 - 3)', 'Wake Forest (3 - 1)']
-Kentucky, 4, 0, 1, 5, 7, 73, ['Miami (OH) (2 - 2)', 'Florida (2 - 2)', 'Northern Illinois (1 - 3)']
-Washington, 4, 0, 1, 4, 7, 100, ['Kent State (1 - 3)', 'Michigan State (2 - 2)', 'Stanford (1 - 2)']
-UCLA, 4, 0, 1, 4, 8, 95, ['Bowling Green (1 - 3)', 'South Alabama (3 - 1)', 'Colorado (0 - 4)']
-Minnesota, 4, 0, 1, 3, 10, 159, ['New Mexico State (1 - 4)', 'Colorado (0 - 4)', 'Michigan State (2 - 2)']
-Coastal Carolina, 4, 0, 1, 2, 9, 43, ['Army (1 - 2)', 'Buffalo (1 - 3)', 'Georgia State (0 - 4)']
-James Madison, 3, 0, 1, 5, 3, 97, ['Middle Tennessee (3 - 1)', 'Appalachian State (2 - 2)']
-Oklahoma State, 3, 0, 1, 2, 6, 87, ['Central Michigan (1 - 3)', 'Arizona State (1 - 3)']
-TCU, 3, 0, 1, 2, 6, 75, ['Colorado (0 - 4)', 'SMU (2 - 2)']
-BYU, 3, 1, 0, 10, 7, 28, ['South Florida (1 - 3)', 'Baylor (3 - 1)', 'Oregon (3 - 1)', 'Wyoming (3 - 2)']
-Mississippi State, 3, 1, 0, 9, 7, 64, ['Memphis (3 - 1)', 'Arizona (2 - 2)', 'LSU (3 - 1)', 'Bowling Green (1 - 3)']
-Liberty, 3, 1, 0, 8, 7, 17, ['Southern Mississippi (2 - 2)', 'UAB (2 - 1)', 'Wake Forest (3 - 1)', 'Akron (1 - 3)']
-Maryland, 3, 1, 0, 8, 9, 56, ['Buffalo (1 - 3)', 'Charlotte (1 - 4)', 'SMU (2 - 2)', 'Michigan (4 - 0)']
-Memphis, 3, 1, 0, 7, 9, 20, ['Mississippi State (3 - 1)', 'Navy (1 - 2)', 'Arkansas State (1 - 3)', 'North Texas (2 - 3)']
-Oklahoma, 3, 1, 0, 7, 10, 90, ['UTEP (2 - 3)', 'Kent State (1 - 3)', 'Nebraska (1 - 3)', 'Kansas State (3 - 1)']
-Oregon, 3, 1, 1, 10, 2, 34, ['Georgia (4 - 0)', 'BYU (3 - 1)', 'Washington State (3 - 1)']
-Wake Forest, 3, 1, 1, 10, 3, 49, ['Vanderbilt (3 - 2)', 'Liberty (3 - 1)', 'Clemson (4 - 0)']
-LSU, 3, 1, 1, 9, 3, 100, ['Florida State (4 - 0)', 'Mississippi State (3 - 1)', 'New Mexico (2 - 2)']
-Indiana, 3, 1, 1, 9, 3, -2, ['Illinois (3 - 1)', 'Western Kentucky (3 - 1)', 'Cincinnati (3 - 1)']
-Auburn, 3, 1, 1, 8, 3, 8, ['San José State (2 - 1)', 'Penn State (4 - 0)', 'Missouri (2 - 2)']
-Baylor, 3, 1, 1, 8, 4, 95, ['BYU (3 - 1)', 'Texas State (2 - 2)', 'Iowa State (3 - 1)']
-Cincinnati, 3, 1, 1, 8, 4, 88, ['Arkansas (3 - 1)', 'Miami (OH) (2 - 2)', 'Indiana (3 - 1)']
-Kansas State, 3, 1, 1, 8, 4, 62, ['Missouri (2 - 2)', 'Tulane (3 - 1)', 'Oklahoma (3 - 1)']
-Iowa State, 3, 1, 1, 8, 4, 61, ['Iowa (3 - 1)', 'Ohio (2 - 2)', 'Baylor (3 - 1)']
-Texas Tech, 3, 1, 1, 8, 4, 46, ['Houston (2 - 2)', 'NC State (4 - 0)', 'Texas (2 - 2)']
-Arkansas, 3, 1, 1, 8, 4, 30, ['Cincinnati (3 - 1)', 'South Carolina (2 - 2)', 'Texas A&M (3 - 1)']
-Illinois, 3, 1, 1, 8, 5, 81, ['Wyoming (3 - 2)', 'Indiana (3 - 1)', 'Virginia (2 - 2)']
-Iowa, 3, 1, 1, 8, 5, 45, ['Iowa State (3 - 1)', 'Nevada (2 - 3)', 'Rutgers (3 - 1)']
-Oregon State, 3, 1, 1, 7, 4, 57, ['Boise State (2 - 2)', 'Fresno State (1 - 2)', 'USC (4 - 0)']
-Duke, 3, 1, 1, 7, 5, 59, ['Temple (2 - 2)', 'Northwestern (1 - 3)', 'Kansas (4 - 0)']
-Pittsburgh, 3, 1, 1, 7, 5, 42, ['West Virginia (2 - 2)', 'Tennessee (4 - 0)', 'Western Michigan (1 - 3)']
-California, 3, 1, 1, 7, 5, 38, ['UNLV (3 - 1)', 'Notre Dame (2 - 2)', 'Arizona (2 - 2)']
-Texas A&M, 3, 1, 1, 7, 5, 38, ['Appalachian State (2 - 2)', 'Miami (2 - 2)', 'Arkansas (3 - 1)']
-Tulane, 3, 1, 1, 6, 6, 88, ['UMass (1 - 3)', 'Kansas State (3 - 1)', 'Southern Mississippi (2 - 2)']
-South Alabama, 3, 1, 1, 6, 6, 78, ['Central Michigan (1 - 3)', 'UCLA (4 - 0)', 'Louisiana Tech (1 - 3)']
-Rutgers, 3, 1, 1, 6, 6, 45, ['Boston College (1 - 3)', 'Temple (2 - 2)', 'Iowa (3 - 1)']
-UNLV, 3, 1, 1, 6, 7, 66, ['California (3 - 1)', 'North Texas (2 - 3)', 'Utah State (1 - 3)']
-Middle Tennessee, 3, 1, 1, 5, 6, 35, ['James Madison (3 - 0)', 'Colorado State (0 - 4)', 'Miami (2 - 2)']
-Western Kentucky, 3, 1, 1, 5, 7, 113, ["Hawai'i (1 - 4)", 'Indiana (3 - 1)', 'Florida International (1 - 2)']
-Utah, 3, 1, 1, 5, 7, 112, ['Florida (2 - 2)', 'San Diego State (2 - 2)', 'Arizona State (1 - 3)']
-Washington State, 3, 1, 1, 5, 7, 38, ['Wisconsin (2 - 2)', 'Colorado State (0 - 4)', 'Oregon (3 - 1)']
-Air Force, 3, 1, 1, 5, 9, 87, ['Colorado (0 - 4)', 'Wyoming (3 - 2)', 'Nevada (2 - 3)']
-Georgia Southern, 3, 1, 1, 4, 7, 52, ['Nebraska (1 - 3)', 'UAB (2 - 1)', 'Ball State (1 - 3)']
-UCF, 3, 1, 1, 4, 8, 83, ['Louisville (2 - 2)', 'Florida Atlantic (1 - 3)', 'Georgia Tech (1 - 3)']
-North Carolina, 3, 1, 1, 4, 8, 28, ['Appalachian State (2 - 2)', 'Georgia State (0 - 4)', 'Notre Dame (2 - 2)']
-Wyoming, 3, 2, 1, 11, 5, -17, ['Illinois (3 - 1)', 'Tulsa (2 - 2)', 'Air Force (3 - 1)', 'BYU (3 - 1)']
-Vanderbilt, 3, 2, 1, 9, 8, 2, ["Hawai'i (1 - 4)", 'Wake Forest (3 - 1)', 'Northern Illinois (1 - 3)', 'Alabama (4 - 0)']
-UAB, 2, 1, 1, 6, 2, 66, ['Liberty (3 - 1)', 'Georgia Southern (3 - 1)']
-San José State, 2, 1, 1, 4, 4, 24, ['Auburn (3 - 1)', 'Western Michigan (1 - 3)']
-Louisville, 2, 2, 0, 12, 4, 16, ['Syracuse (4 - 0)', 'UCF (3 - 1)', 'Florida State (4 - 0)', 'South Florida (1 - 3)']
-Notre Dame, 2, 2, 0, 12, 4, 4, ['Ohio State (4 - 0)', 'Marshall (2 - 2)', 'California (3 - 1)', 'North Carolina (3 - 1)']
-Florida, 2, 2, 0, 12, 4, -9, ['Utah (3 - 1)', 'Kentucky (4 - 0)', 'South Florida (1 - 3)', 'Tennessee (4 - 0)']
-Appalachian State, 2, 2, 0, 11, 4, 1, ['North Carolina (3 - 1)', 'Texas A&M (3 - 1)', 'Troy (2 - 2)', 'James Madison (3 - 0)']
-Texas, 2, 2, 0, 11, 5, 59, ['Louisiana Monroe (2 - 2)', 'Alabama (4 - 0)', 'UT San Antonio (2 - 2)', 'Texas Tech (3 - 1)']
-Houston, 2, 2, 0, 11, 5, -12, ['UT San Antonio (2 - 2)', 'Texas Tech (3 - 1)', 'Kansas (4 - 0)', 'Rice (2 - 2)']
-Michigan State, 2, 2, 0, 10, 6, 36, ['Western Michigan (1 - 3)', 'Akron (1 - 3)', 'Washington (4 - 0)', 'Minnesota (4 - 0)']
-South Carolina, 2, 2, 0, 8, 9, 2, ['Georgia State (0 - 4)', 'Arkansas (3 - 1)', 'Georgia (4 - 0)', 'Charlotte (1 - 4)']
-Old Dominion, 2, 2, 0, 7, 9, -21, ['Virginia Tech (2 - 2)', 'East Carolina (2 - 2)', 'Virginia (2 - 2)', 'Arkansas State (1 - 3)']
-West Virginia, 2, 2, 1, 9, 3, 61, ['Pittsburgh (3 - 1)', 'Kansas (4 - 0)', 'Virginia Tech (2 - 2)']
-Purdue, 2, 2, 1, 9, 3, 51, ['Penn State (4 - 0)', 'Syracuse (4 - 0)', 'Florida Atlantic (1 - 3)']
-Virginia, 2, 2, 1, 9, 3, -4, ['Illinois (3 - 1)', 'Old Dominion (2 - 2)', 'Syracuse (4 - 0)']
-Miami, 2, 2, 1, 8, 4, 58, ['Southern Mississippi (2 - 2)', 'Texas A&M (3 - 1)', 'Middle Tennessee (3 - 1)']
-SMU, 2, 2, 1, 8, 4, 52, ['North Texas (2 - 3)', 'Maryland (3 - 1)', 'TCU (3 - 0)']
-Southern Mississippi, 2, 2, 1, 8, 4, 32, ['Liberty (3 - 1)', 'Miami (2 - 2)', 'Tulane (3 - 1)']
-Troy, 2, 2, 1, 8, 4, 8, ['Ole Miss (4 - 0)', 'Appalachian State (2 - 2)', 'Marshall (2 - 2)']
-Rice, 2, 2, 1, 8, 4, -5, ['USC (4 - 0)', 'Louisiana (2 - 2)', 'Houston (2 - 2)']
-Arizona, 2, 2, 1, 8, 4, -19, ['San Diego State (2 - 2)', 'Mississippi State (3 - 1)', 'California (3 - 1)']
-Miami (OH), 2, 2, 1, 8, 4, -25, ['Kentucky (4 - 0)', 'Cincinnati (3 - 1)', 'Northwestern (1 - 3)']
-Ohio, 2, 2, 1, 8, 4, -59, ['Florida Atlantic (1 - 3)', 'Penn State (4 - 0)', 'Iowa State (3 - 1)']
-Louisiana Monroe, 2, 2, 1, 8, 4, -66, ['Texas (2 - 2)', 'Alabama (4 - 0)', 'Louisiana (2 - 2)']
-Wisconsin, 2, 2, 1, 8, 5, 63, ['Washington State (3 - 1)', 'New Mexico State (1 - 4)', 'Ohio State (4 - 0)']
-Tulsa, 2, 2, 1, 8, 5, 29, ['Wyoming (3 - 2)', 'Northern Illinois (1 - 3)', 'Ole Miss (4 - 0)']
-East Carolina, 2, 2, 1, 7, 4, 60, ['NC State (4 - 0)', 'Old Dominion (2 - 2)', 'Navy (1 - 2)']
-Toledo, 2, 2, 1, 7, 5, 23, ['UMass (1 - 3)', 'Ohio State (4 - 0)', 'San Diego State (2 - 2)']
-Missouri, 2, 2, 1, 7, 5, 14, ['Louisiana Tech (1 - 3)', 'Kansas State (3 - 1)', 'Auburn (3 - 1)']
-Temple, 2, 2, 1, 7, 5, 12, ['Duke (3 - 1)', 'Rutgers (3 - 1)', 'UMass (1 - 3)']
-San Diego State, 2, 2, 1, 7, 5, -12, ['Arizona (2 - 2)', 'Utah (3 - 1)', 'Toledo (2 - 2)']
-Boise State, 2, 2, 1, 7, 6, 6, ['Oregon State (3 - 1)', 'New Mexico (2 - 2)', 'UTEP (2 - 3)']
-New Mexico, 2, 2, 1, 7, 6, 3, ['Boise State (2 - 2)', 'UTEP (2 - 3)', 'LSU (3 - 1)']
-Louisiana, 2, 2, 1, 6, 6, 29, ['Eastern Michigan (2 - 2)', 'Rice (2 - 2)', 'Louisiana Monroe (2 - 2)']
-Texas State, 2, 2, 1, 6, 6, 4, ['Nevada (2 - 3)', 'Florida International (1 - 2)', 'Baylor (3 - 1)']
-UT San Antonio, 2, 2, 1, 5, 6, 8, ['Houston (2 - 2)', 'Army (1 - 2)', 'Texas (2 - 2)']
-Marshall, 2, 2, 1, 5, 7, 45, ['Notre Dame (2 - 2)', 'Bowling Green (1 - 3)', 'Troy (2 - 2)']
-Virginia Tech, 2, 2, 1, 5, 7, 11, ['Old Dominion (2 - 2)', 'Boston College (1 - 3)', 'West Virginia (2 - 2)']
-Eastern Michigan, 2, 2, 1, 4, 8, -30, ['Louisiana (2 - 2)', 'Arizona State (1 - 3)', 'Buffalo (1 - 3)']
-UTEP, 2, 3, 0, 10, 12, -43, ['North Texas (2 - 3)', 'Oklahoma (3 - 1)', 'New Mexico State (1 - 4)', 'New Mexico (2 - 2)', 'Boise State (2 - 2)']
-North Texas, 2, 3, 1, 10, 7, -29, ['UTEP (2 - 3)', 'SMU (2 - 2)', 'UNLV (3 - 1)', 'Memphis (3 - 1)']
-Nevada, 2, 3, 1, 9, 8, -34, ['New Mexico State (1 - 4)', 'Texas State (2 - 2)', 'Iowa (3 - 1)', 'Air Force (3 - 1)']
-Stanford, 1, 2, 1, 8, 0, 0, ['USC (4 - 0)', 'Washington (4 - 0)']
-Fresno State, 1, 2, 1, 7, 1, -3, ['Oregon State (3 - 1)', 'USC (4 - 0)']
-Army, 1, 2, 1, 6, 2, 26, ['Coastal Carolina (4 - 0)', 'UT San Antonio (2 - 2)']
-Navy, 1, 2, 1, 5, 3, -28, ['Memphis (3 - 1)', 'East Carolina (2 - 2)']
-Florida International, 1, 2, 1, 5, 3, -101, ['Texas State (2 - 2)', 'Western Kentucky (3 - 1)']
-Western Michigan, 1, 3, 0, 8, 7, -64, ['Michigan State (2 - 2)', 'Ball State (1 - 3)', 'Pittsburgh (3 - 1)', 'San José State (2 - 1)']
-Florida Atlantic, 1, 3, 0, 8, 9, -1, ['Charlotte (1 - 4)', 'Ohio (2 - 2)', 'UCF (3 - 1)', 'Purdue (2 - 2)']
-Kent State, 1, 3, 1, 11, 1, -19, ['Washington (4 - 0)', 'Oklahoma (3 - 1)', 'Georgia (4 - 0)']
-Georgia Tech, 1, 3, 1, 11, 1, -72, ['Clemson (4 - 0)', 'Ole Miss (4 - 0)', 'UCF (3 - 1)']
-Central Michigan, 1, 3, 1, 10, 1, -6, ['Oklahoma State (3 - 0)', 'South Alabama (3 - 1)', 'Penn State (4 - 0)']
-Arkansas State, 1, 3, 1, 9, 3, 7, ['Ohio State (4 - 0)', 'Memphis (3 - 1)', 'Old Dominion (2 - 2)']
-Buffalo, 1, 3, 1, 9, 3, -20, ['Maryland (3 - 1)', 'Coastal Carolina (4 - 0)', 'Eastern Michigan (2 - 2)']
-Boston College, 1, 3, 1, 9, 3, -27, ['Rutgers (3 - 1)', 'Virginia Tech (2 - 2)', 'Florida State (4 - 0)']
-Louisiana Tech, 1, 3, 1, 9, 3, -45, ['Missouri (2 - 2)', 'Clemson (4 - 0)', 'South Alabama (3 - 1)']
-Bowling Green, 1, 3, 1, 9, 3, -58, ['UCLA (4 - 0)', 'Marshall (2 - 2)', 'Mississippi State (3 - 1)']
-Akron, 1, 3, 1, 9, 3, -111, ['Michigan State (2 - 2)', 'Tennessee (4 - 0)', 'Liberty (3 - 1)']
-Northern Illinois, 1, 3, 1, 9, 4, -14, ['Tulsa (2 - 2)', 'Vanderbilt (3 - 2)', 'Kentucky (4 - 0)']
-Arizona State, 1, 3, 1, 8, 3, -10, ['Oklahoma State (3 - 0)', 'Eastern Michigan (2 - 2)', 'Utah (3 - 1)']
-Ball State, 1, 3, 1, 8, 4, -36, ['Tennessee (4 - 0)', 'Western Michigan (1 - 3)', 'Georgia Southern (3 - 1)']
-Utah State, 1, 3, 1, 8, 5, -82, ['Connecticut (1 - 4)', 'Alabama (4 - 0)', 'UNLV (3 - 1)']
-Nebraska, 1, 3, 1, 7, 5, -20, ['Northwestern (1 - 3)', 'Georgia Southern (3 - 1)', 'Oklahoma (3 - 1)']
-South Florida, 1, 3, 1, 7, 5, -48, ['BYU (3 - 1)', 'Florida (2 - 2)', 'Louisville (2 - 2)']
-UMass, 1, 3, 1, 7, 5, -88, ['Tulane (3 - 1)', 'Toledo (2 - 2)', 'Temple (2 - 2)']
-Northwestern, 1, 3, 1, 6, 6, -15, ['Nebraska (1 - 3)', 'Duke (3 - 1)', 'Miami (OH) (2 - 2)']
-New Mexico State, 1, 4, 0, 11, 12, -96, ['Nevada (2 - 3)', 'Minnesota (4 - 0)', 'UTEP (2 - 3)', 'Wisconsin (2 - 2)', "Hawai'i (1 - 4)"]
+name, wins, losses, fcs_count, opponent_total_wins, opponent_total_losses, point_diff, opponents,,,,
+Penn State,4,0,0,8,8,88, ['Purdue (2 - 2)', 'Ohio (2 - 2)', 'Auburn (3 - 1)', 'Central Michigan (1 - 3)'],
+Alabama,4,0,0,8,9,164, ['Utah State (1 - 3)', 'Texas (2 - 2)', 'Louisiana Monroe (2 - 2)', 'Vanderbilt (3 - 2)'],
+USC,4,0,0,7,7,96, ['Rice (2 - 2)', 'Stanford (1 - 2)', 'Fresno State (1 - 2)', 'Oregon State (3 - 1)'],
+Ohio State,4,0,0,7,9,131, ['Notre Dame (2 - 2)', 'Arkansas State (1 - 3)', 'Toledo (2 - 2)', 'Wisconsin (2 - 2)'],
+Tennessee,4,0,0,7,9,118, ['Ball State (1 - 3)', 'Pittsburgh (3 - 1)', 'Akron (1 - 3)', 'Florida (2 - 2)'],
+Syracuse,4,0,0,7,10,63, ['Louisville (2 - 2)', 'Connecticut (1 - 4)', 'Purdue (2 - 2)', 'Virginia (2 - 2)'],
+Michigan,4,0,0,5,13,156, ['Colorado State (0 - 4)',Hawai'i (1 - 4), 'Connecticut (1 - 4)', 'Maryland (3 - 1)'],
+Kansas,4,0,1,7,5,85, ['West Virginia (2 - 2)', 'Houston (2 - 2)', 'Duke (3 - 1)'],,
+Georgia,4,0,1,6,6,137, ['Oregon (3 - 1)', 'South Carolina (2 - 2)', 'Kent State (1 - 3)'],,
+Florida State,4,0,1,6,6,75, ['LSU (3 - 1)', 'Louisville (2 - 2)', 'Boston College (1 - 3)'],,
+NC State,4,0,1,6,7,97, ['East Carolina (2 - 2)', 'Texas Tech (3 - 1)', 'Connecticut (1 - 4)'],,
+Ole Miss,4,0,1,5,7,124, ['Troy (2 - 2)', 'Georgia Tech (1 - 3)', 'Tulsa (2 - 2)'],,
+Clemson,4,0,1,5,7,88, ['Georgia Tech (1 - 3)', 'Louisiana Tech (1 - 3)', 'Wake Forest (3 - 1)'],,
+Kentucky,4,0,1,5,7,73, ['Miami (OH) (2 - 2)', 'Florida (2 - 2)', 'Northern Illinois (1 - 3)'],,
+Washington,4,0,1,4,7,100, ['Kent State (1 - 3)', 'Michigan State (2 - 2)', 'Stanford (1 - 2)'],,
+UCLA,4,0,1,4,8,95, ['Bowling Green (1 - 3)', 'South Alabama (3 - 1)', 'Colorado (0 - 4)'],,
+Minnesota,4,0,1,3,10,159, ['New Mexico State (1 - 4)', 'Colorado (0 - 4)', 'Michigan State (2 - 2)'],,
+Coastal Carolina,4,0,1,2,9,43, ['Army (1 - 2)', 'Buffalo (1 - 3)', 'Georgia State (0 - 4)'],,
+James Madison,3,0,1,5,3,97, ['Middle Tennessee (3 - 1)', 'Appalachian State (2 - 2)'],,,
+Oklahoma State,3,0,1,2,6,87, ['Central Michigan (1 - 3)', 'Arizona State (1 - 3)'],,,
+TCU,3,0,1,2,6,75, ['Colorado (0 - 4)', 'SMU (2 - 2)'],,,
+BYU,3,1,0,10,7,28, ['South Florida (1 - 3)', 'Baylor (3 - 1)', 'Oregon (3 - 1)', 'Wyoming (3 - 2)'],
+Mississippi State,3,1,0,9,7,64, ['Memphis (3 - 1)', 'Arizona (2 - 2)', 'LSU (3 - 1)', 'Bowling Green (1 - 3)'],
+Liberty,3,1,0,8,7,17, ['Southern Mississippi (2 - 2)', 'UAB (2 - 1)', 'Wake Forest (3 - 1)', 'Akron (1 - 3)'],
+Maryland,3,1,0,8,9,56, ['Buffalo (1 - 3)', 'Charlotte (1 - 4)', 'SMU (2 - 2)', 'Michigan (4 - 0)'],
+Memphis,3,1,0,7,9,20, ['Mississippi State (3 - 1)', 'Navy (1 - 2)', 'Arkansas State (1 - 3)', 'North Texas (2 - 3)'],
+Oklahoma,3,1,0,7,10,90, ['UTEP (2 - 3)', 'Kent State (1 - 3)', 'Nebraska (1 - 3)', 'Kansas State (3 - 1)'],
+Oregon,3,1,1,10,2,34, ['Georgia (4 - 0)', 'BYU (3 - 1)', 'Washington State (3 - 1)'],,
+Wake Forest,3,1,1,10,3,49, ['Vanderbilt (3 - 2)', 'Liberty (3 - 1)', 'Clemson (4 - 0)'],,
+LSU,3,1,1,9,3,100, ['Florida State (4 - 0)', 'Mississippi State (3 - 1)', 'New Mexico (2 - 2)'],,
+Indiana,3,1,1,9,3,-2, ['Illinois (3 - 1)', 'Western Kentucky (3 - 1)', 'Cincinnati (3 - 1)'],,
+Auburn,3,1,1,8,3,8, ['San José State (2 - 1)', 'Penn State (4 - 0)', 'Missouri (2 - 2)'],,
+Baylor,3,1,1,8,4,95, ['BYU (3 - 1)', 'Texas State (2 - 2)', 'Iowa State (3 - 1)'],,
+Cincinnati,3,1,1,8,4,88, ['Arkansas (3 - 1)', 'Miami (OH) (2 - 2)', 'Indiana (3 - 1)'],,
+Kansas State,3,1,1,8,4,62, ['Missouri (2 - 2)', 'Tulane (3 - 1)', 'Oklahoma (3 - 1)'],,
+Iowa State,3,1,1,8,4,61, ['Iowa (3 - 1)', 'Ohio (2 - 2)', 'Baylor (3 - 1)'],,
+Texas Tech,3,1,1,8,4,46, ['Houston (2 - 2)', 'NC State (4 - 0)', 'Texas (2 - 2)'],,
+Arkansas,3,1,1,8,4,30, ['Cincinnati (3 - 1)', 'South Carolina (2 - 2)', 'Texas A&M (3 - 1)'],,
+Illinois,3,1,1,8,5,81, ['Wyoming (3 - 2)', 'Indiana (3 - 1)', 'Virginia (2 - 2)'],,
+Iowa,3,1,1,8,5,45, ['Iowa State (3 - 1)', 'Nevada (2 - 3)', 'Rutgers (3 - 1)'],,
+Oregon State,3,1,1,7,4,57, ['Boise State (2 - 2)', 'Fresno State (1 - 2)', 'USC (4 - 0)'],,
+Duke,3,1,1,7,5,59, ['Temple (2 - 2)', 'Northwestern (1 - 3)', 'Kansas (4 - 0)'],,
+Pittsburgh,3,1,1,7,5,42, ['West Virginia (2 - 2)', 'Tennessee (4 - 0)', 'Western Michigan (1 - 3)'],,
+California,3,1,1,7,5,38, ['UNLV (3 - 1)', 'Notre Dame (2 - 2)', 'Arizona (2 - 2)'],,
+Texas A&M,3,1,1,7,5,38, ['Appalachian State (2 - 2)', 'Miami (2 - 2)', 'Arkansas (3 - 1)'],,
+Tulane,3,1,1,6,6,88, ['UMass (1 - 3)', 'Kansas State (3 - 1)', 'Southern Mississippi (2 - 2)'],,
+South Alabama,3,1,1,6,6,78, ['Central Michigan (1 - 3)', 'UCLA (4 - 0)', 'Louisiana Tech (1 - 3)'],,
+Rutgers,3,1,1,6,6,45, ['Boston College (1 - 3)', 'Temple (2 - 2)', 'Iowa (3 - 1)'],,
+UNLV,3,1,1,6,7,66, ['California (3 - 1)', 'North Texas (2 - 3)', 'Utah State (1 - 3)'],,
+Middle Tennessee,3,1,1,5,6,35, ['James Madison (3 - 0)', 'Colorado State (0 - 4)', 'Miami (2 - 2)'],,
+Western Kentucky,3,1,1,5,7,113," [""Hawai'i (1 - 4)""", 'Indiana (3 - 1)', 'Florida International (1 - 2)'],,
+Utah,3,1,1,5,7,112, ['Florida (2 - 2)', 'San Diego State (2 - 2)', 'Arizona State (1 - 3)'],,
+Washington State,3,1,1,5,7,38, ['Wisconsin (2 - 2)', 'Colorado State (0 - 4)', 'Oregon (3 - 1)'],,
+Air Force,3,1,1,5,9,87, ['Colorado (0 - 4)', 'Wyoming (3 - 2)', 'Nevada (2 - 3)'],,
+Georgia Southern,3,1,1,4,7,52, ['Nebraska (1 - 3)', 'UAB (2 - 1)', 'Ball State (1 - 3)'],,
+UCF,3,1,1,4,8,83, ['Louisville (2 - 2)', 'Florida Atlantic (1 - 3)', 'Georgia Tech (1 - 3)'],,
+North Carolina,3,1,1,4,8,28, ['Appalachian State (2 - 2)', 'Georgia State (0 - 4)', 'Notre Dame (2 - 2)'],,
+Wyoming,3,2,1,11,5,-17, ['Illinois (3 - 1)', 'Tulsa (2 - 2)', 'Air Force (3 - 1)', 'BYU (3 - 1)'],
+Vanderbilt,3,2,1,9,8,2," [""Hawai'i (1 - 4)""", 'Wake Forest (3 - 1)', 'Northern Illinois (1 - 3)', 'Alabama (4 - 0)'],
+UAB,2,1,1,6,2,66, ['Liberty (3 - 1)', 'Georgia Southern (3 - 1)'],,,
+San José State,2,1,1,4,4,24, ['Auburn (3 - 1)', 'Western Michigan (1 - 3)'],,,
+Louisville,2,2,0,12,4,16, ['Syracuse (4 - 0)', 'UCF (3 - 1)', 'Florida State (4 - 0)', 'South Florida (1 - 3)'],
+Notre Dame,2,2,0,12,4,4, ['Ohio State (4 - 0)', 'Marshall (2 - 2)', 'California (3 - 1)', 'North Carolina (3 - 1)'],
+Florida,2,2,0,12,4,-9, ['Utah (3 - 1)', 'Kentucky (4 - 0)', 'South Florida (1 - 3)', 'Tennessee (4 - 0)'],
+Appalachian State,2,2,0,11,4,1, ['North Carolina (3 - 1)', 'Texas A&M (3 - 1)', 'Troy (2 - 2)', 'James Madison (3 - 0)'],
+Texas,2,2,0,11,5,59, ['Louisiana Monroe (2 - 2)', 'Alabama (4 - 0)', 'UT San Antonio (2 - 2)', 'Texas Tech (3 - 1)'],
+Houston,2,2,0,11,5,-12, ['UT San Antonio (2 - 2)', 'Texas Tech (3 - 1)', 'Kansas (4 - 0)', 'Rice (2 - 2)'],
+Michigan State,2,2,0,10,6,36, ['Western Michigan (1 - 3)', 'Akron (1 - 3)', 'Washington (4 - 0)', 'Minnesota (4 - 0)'],
+South Carolina,2,2,0,8,9,2, ['Georgia State (0 - 4)', 'Arkansas (3 - 1)', 'Georgia (4 - 0)', 'Charlotte (1 - 4)'],
+Old Dominion,2,2,0,7,9,-21, ['Virginia Tech (2 - 2)', 'East Carolina (2 - 2)', 'Virginia (2 - 2)', 'Arkansas State (1 - 3)'],
+West Virginia,2,2,1,9,3,61, ['Pittsburgh (3 - 1)', 'Kansas (4 - 0)', 'Virginia Tech (2 - 2)'],,
+Purdue,2,2,1,9,3,51, ['Penn State (4 - 0)', 'Syracuse (4 - 0)', 'Florida Atlantic (1 - 3)'],,
+Virginia,2,2,1,9,3,-4, ['Illinois (3 - 1)', 'Old Dominion (2 - 2)', 'Syracuse (4 - 0)'],,
+Miami,2,2,1,8,4,58, ['Southern Mississippi (2 - 2)', 'Texas A&M (3 - 1)', 'Middle Tennessee (3 - 1)'],,
+SMU,2,2,1,8,4,52, ['North Texas (2 - 3)', 'Maryland (3 - 1)', 'TCU (3 - 0)'],,
+Southern Mississippi,2,2,1,8,4,32, ['Liberty (3 - 1)', 'Miami (2 - 2)', 'Tulane (3 - 1)'],,
+Troy,2,2,1,8,4,8, ['Ole Miss (4 - 0)', 'Appalachian State (2 - 2)', 'Marshall (2 - 2)'],,
+Rice,2,2,1,8,4,-5, ['USC (4 - 0)', 'Louisiana (2 - 2)', 'Houston (2 - 2)'],,
+Arizona,2,2,1,8,4,-19, ['San Diego State (2 - 2)', 'Mississippi State (3 - 1)', 'California (3 - 1)'],,
+Miami (OH),2,2,1,8,4,-25, ['Kentucky (4 - 0)', 'Cincinnati (3 - 1)', 'Northwestern (1 - 3)'],,
+Ohio,2,2,1,8,4,-59, ['Florida Atlantic (1 - 3)', 'Penn State (4 - 0)', 'Iowa State (3 - 1)'],,
+Louisiana Monroe,2,2,1,8,4,-66, ['Texas (2 - 2)', 'Alabama (4 - 0)', 'Louisiana (2 - 2)'],,
+Wisconsin,2,2,1,8,5,63, ['Washington State (3 - 1)', 'New Mexico State (1 - 4)', 'Ohio State (4 - 0)'],,
+Tulsa,2,2,1,8,5,29, ['Wyoming (3 - 2)', 'Northern Illinois (1 - 3)', 'Ole Miss (4 - 0)'],,
+East Carolina,2,2,1,7,4,60, ['NC State (4 - 0)', 'Old Dominion (2 - 2)', 'Navy (1 - 2)'],,
+Toledo,2,2,1,7,5,23, ['UMass (1 - 3)', 'Ohio State (4 - 0)', 'San Diego State (2 - 2)'],,
+Missouri,2,2,1,7,5,14, ['Louisiana Tech (1 - 3)', 'Kansas State (3 - 1)', 'Auburn (3 - 1)'],,
+Temple,2,2,1,7,5,12, ['Duke (3 - 1)', 'Rutgers (3 - 1)', 'UMass (1 - 3)'],,
+San Diego State,2,2,1,7,5,-12, ['Arizona (2 - 2)', 'Utah (3 - 1)', 'Toledo (2 - 2)'],,
+Boise State,2,2,1,7,6,6, ['Oregon State (3 - 1)', 'New Mexico (2 - 2)', 'UTEP (2 - 3)'],,
+New Mexico,2,2,1,7,6,3, ['Boise State (2 - 2)', 'UTEP (2 - 3)', 'LSU (3 - 1)'],,
+Louisiana,2,2,1,6,6,29, ['Eastern Michigan (2 - 2)', 'Rice (2 - 2)', 'Louisiana Monroe (2 - 2)'],,
+Texas State,2,2,1,6,6,4, ['Nevada (2 - 3)', 'Florida International (1 - 2)', 'Baylor (3 - 1)'],,
+UT San Antonio,2,2,1,5,6,8, ['Houston (2 - 2)', 'Army (1 - 2)', 'Texas (2 - 2)'],,
+Marshall,2,2,1,5,7,45, ['Notre Dame (2 - 2)', 'Bowling Green (1 - 3)', 'Troy (2 - 2)'],,
+Virginia Tech,2,2,1,5,7,11, ['Old Dominion (2 - 2)', 'Boston College (1 - 3)', 'West Virginia (2 - 2)'],,
+Eastern Michigan,2,2,1,4,8,-30, ['Louisiana (2 - 2)', 'Arizona State (1 - 3)', 'Buffalo (1 - 3)'],,
+UTEP,2,3,0,10,12,-43, ['North Texas (2 - 3)', 'Oklahoma (3 - 1)', 'New Mexico State (1 - 4)', 'New Mexico (2 - 2)', 'Boise State (2 - 2)']
+North Texas,2,3,1,10,7,-29, ['UTEP (2 - 3)', 'SMU (2 - 2)', 'UNLV (3 - 1)', 'Memphis (3 - 1)'],
+Nevada,2,3,1,9,8,-34, ['New Mexico State (1 - 4)', 'Texas State (2 - 2)', 'Iowa (3 - 1)', 'Air Force (3 - 1)'],
+Stanford,1,2,1,8,0,0, ['USC (4 - 0)', 'Washington (4 - 0)'],,,
+Fresno State,1,2,1,7,1,-3, ['Oregon State (3 - 1)', 'USC (4 - 0)'],,,
+Army,1,2,1,6,2,26, ['Coastal Carolina (4 - 0)', 'UT San Antonio (2 - 2)'],,,
+Navy,1,2,1,5,3,-28, ['Memphis (3 - 1)', 'East Carolina (2 - 2)'],,,
+Florida International,1,2,1,5,3,-101, ['Texas State (2 - 2)', 'Western Kentucky (3 - 1)'],,,
+Western Michigan,1,3,0,8,7,-64, ['Michigan State (2 - 2)', 'Ball State (1 - 3)', 'Pittsburgh (3 - 1)', 'San José State (2 - 1)'],
+Florida Atlantic,1,3,0,8,9,-1, ['Charlotte (1 - 4)', 'Ohio (2 - 2)', 'UCF (3 - 1)', 'Purdue (2 - 2)'],
+Kent State,1,3,1,11,1,-19, ['Washington (4 - 0)', 'Oklahoma (3 - 1)', 'Georgia (4 - 0)'],,
+Georgia Tech,1,3,1,11,1,-72, ['Clemson (4 - 0)', 'Ole Miss (4 - 0)', 'UCF (3 - 1)'],,
+Central Michigan,1,3,1,10,1,-6, ['Oklahoma State (3 - 0)', 'South Alabama (3 - 1)', 'Penn State (4 - 0)'],,
+Arkansas State,1,3,1,9,3,7, ['Ohio State (4 - 0)', 'Memphis (3 - 1)', 'Old Dominion (2 - 2)'],,
+Buffalo,1,3,1,9,3,-20, ['Maryland (3 - 1)', 'Coastal Carolina (4 - 0)', 'Eastern Michigan (2 - 2)'],,
+Boston College,1,3,1,9,3,-27, ['Rutgers (3 - 1)', 'Virginia Tech (2 - 2)', 'Florida State (4 - 0)'],,
+Louisiana Tech,1,3,1,9,3,-45, ['Missouri (2 - 2)', 'Clemson (4 - 0)', 'South Alabama (3 - 1)'],,
+Bowling Green,1,3,1,9,3,-58, ['UCLA (4 - 0)', 'Marshall (2 - 2)', 'Mississippi State (3 - 1)'],,
+Akron,1,3,1,9,3,-111, ['Michigan State (2 - 2)', 'Tennessee (4 - 0)', 'Liberty (3 - 1)'],,
+Northern Illinois,1,3,1,9,4,-14, ['Tulsa (2 - 2)', 'Vanderbilt (3 - 2)', 'Kentucky (4 - 0)'],,
+Arizona State,1,3,1,8,3,-10, ['Oklahoma State (3 - 0)', 'Eastern Michigan (2 - 2)', 'Utah (3 - 1)'],,
+Ball State,1,3,1,8,4,-36, ['Tennessee (4 - 0)', 'Western Michigan (1 - 3)', 'Georgia Southern (3 - 1)'],,
+Utah State,1,3,1,8,5,-82, ['Connecticut (1 - 4)', 'Alabama (4 - 0)', 'UNLV (3 - 1)'],,
+Nebraska,1,3,1,7,5,-20, ['Northwestern (1 - 3)', 'Georgia Southern (3 - 1)', 'Oklahoma (3 - 1)'],,
+South Florida,1,3,1,7,5,-48, ['BYU (3 - 1)', 'Florida (2 - 2)', 'Louisville (2 - 2)'],,
+UMass,1,3,1,7,5,-88, ['Tulane (3 - 1)', 'Toledo (2 - 2)', 'Temple (2 - 2)'],,
+Northwestern,1,3,1,6,6,-15, ['Nebraska (1 - 3)', 'Duke (3 - 1)', 'Miami (OH) (2 - 2)'],,
+New Mexico State,1,4,0,11,12,-96, ['Nevada (2 - 3)', 'Minnesota (4 - 0)', 'UTEP (2 - 3)', 'Wisconsin (2 - 2)',"Hawai'i (1 - 4)""]
 Connecticut, 1, 4, 1, 13, 3, -110, ['Utah State (1 - 3)', 'Syracuse (4 - 0)', 'Michigan (4 - 0)', 'NC State (4 - 0)']
 Hawai'i, 1, 4, 1, 11, 7, -140, ['Vanderbilt (3 - 2)', 'Western Kentucky (3 - 1)', 'Michigan (4 - 0)', 'New Mexico State (1 - 4)']
 Charlotte, 1, 4, 1, 6, 10, -117, ['Florida Atlantic (1 - 3)', 'Maryland (3 - 1)', 'Georgia State (0 - 4)', 'South Carolina (2 - 2)']
 Colorado, 0, 4, 0, 14, 1, -126, ['TCU (3 - 0)', 'Air Force (3 - 1)', 'Minnesota (4 - 0)', 'UCLA (4 - 0)']
 Georgia State, 0, 4, 0, 10, 7, -46, ['South Carolina (2 - 2)', 'North Carolina (3 - 1)', 'Charlotte (1 - 4)', 'Coastal Carolina (4 - 0)']
 Colorado State, 0, 4, 1, 10, 2, -121, ['Michigan (4 - 0)', 'Middle Tennessee (3 - 1)', 'Washington State (3 - 1)']
+"
