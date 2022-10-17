@@ -32,6 +32,8 @@ class Rankings:
             team = Team(self.season, team_id=team_id)
 
             # this should be a list of Team objects
+            # print('team_id: ', team_id)
+            # print('team: ', team.team_record)
             opponents = self.get_opponents(team.team_record.record_id)
             # opponents = self.get_opponents(record_id)
             compiled_result = {"name": team.name,

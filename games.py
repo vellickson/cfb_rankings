@@ -28,7 +28,7 @@ def get_weekly_game_results(season, week):
     #    json.dump(r.json(), f)
 
     # TESTING - reading from weekly file
-    with open('game_data/2022week5.json', 'r') as f:
+    with open('game_data/2022week7.json', 'r') as f:
         results_as_list = json.load(f)
 
     f.close()

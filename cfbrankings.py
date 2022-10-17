@@ -23,6 +23,7 @@ def main(argv):
             week = arg
     print(f'Season is {season}')
     print(f'Week is {week}')
+    # CHANGE FILENAME IN GAMES.PY AND USE SEASON AND WEEK!!! *****
     # games.get_weekly_game_results(season, week)
     rankings = Rankings(season)
     rankings.rank_teams()
