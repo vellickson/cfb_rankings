@@ -53,6 +53,8 @@ class Rankings:
         compiled_results.sort(key=lambda x: (
             -x["wins"], x["losses"], x["fcs_count"], -x["opponent_total_wins"], x["opponent_total_losses"], -x["point_diff"]))
         print('name, wins, losses, fcs_count, opponent_total_wins, opponent_total_losses, point_diff, opponents')
+        # TODO: Iterate through the records to find instances in which two teams have the same win loss record
+        #  and have played head-to-head. Bump the winner ahead....how?
         for record in compiled_results:
             # print(f"record: {record}")
             print(
