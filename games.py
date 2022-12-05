@@ -10,6 +10,7 @@ import psycopg2
 import json
 from team import Team
 from game_record import GameRecord
+from env import BEARER
 
 
 def get_weekly_game_results(season, week):
@@ -18,7 +19,7 @@ def get_weekly_game_results(season, week):
     # PRODUCTION
     url = f'https://api.collegefootballdata.com/games?year={season}&week={week}&division=fbs'
     headers = {'Accept': 'application/json',
-               'Authorization': 'Bearer XNvoXV6PuAgCRpcNSuo9+nYU6xmWa/16GxJ+D8NLwKVS3zyjETQPatR7b6Hq92t4'}
+               'Authorization': BEARER}
     # TODO: Add exception handling to api request and use status_code
     r = requests.get(url, headers=headers)
     print(f'request status code: {r.status_code}')
